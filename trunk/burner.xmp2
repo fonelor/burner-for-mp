@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>2.0</Version>
+  <Groups>
+    <Items>
+      <GroupItem Name="Default">
+        <ParentGroup />
+        <DisplayName>Burner dlls</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>main plugin files</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Burner\bin\Debug\Burner.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c7900b3d-1d84-4a2b-9e4c-114e53898590}-Burner.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\Windows\Burner.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Burner\bin\Debug\XPBurnComponent.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{235a2607-49ec-4fde-a2a4-1c002606ee3c}-XPBurnComponent.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\Windows\XPBurnComponent.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\MediaInfo.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{97205b23-774c-4606-99a6-3b8b6d9ec9fe}-MediaInfo.dll</ZipFileName>
+              <DestinationFilename>%Plugins%\Windows\MediaInfo.dll</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+      <GroupItem Name="Skin">
+        <ParentGroup />
+        <DisplayName>Skin files</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>Skin</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Skin\Blue3\myburner.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a402e729-251c-4784-ac30-0ee473c5bf09}-myburner.xml</ZipFileName>
+              <DestinationFilename>%Skin%\default\myburner.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Skin\Blue3\Media\burn_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{3e39958d-dda9-4c9e-a77d-48e056024de6}-burn_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\default\Media\burn_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Skin\Blue3\Media\hover_my burner.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f6d4ad48-0571-47fc-8d43-eadd8d2a941d}-hover_my burner.png</ZipFileName>
+              <DestinationFilename>%Skin%\Default\Media\hover_my burner.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Skin\Blue3\Media\burn_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{981bb0a7-570a-4df7-a3c8-0eb66690ddb1}-burn_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\Default\burn_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Skin\Blue3\Media\hover_my burner.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c21c4baf-870b-4df7-9323-3d432aed7493}-hover_my burner.png</ZipFileName>
+              <DestinationFilename>%Skin%\Default\hover_my burner.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Skin\Blue3wide\myburner.xml</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{72f407d6-cbd8-4b5a-8b0d-14adbdb38b2c}-myburner.xml</ZipFileName>
+              <DestinationFilename>%Skin%\DefaultWide\myburner.xml</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Skin\Blue3wide\Media\burn_logo.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c0974068-6e38-44c4-b92f-0e9343a26a36}-burn_logo.png</ZipFileName>
+              <DestinationFilename>%Skin%\DefaultWide\Media\burn_logo.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>trunk\Skin\Blue3wide\Media\hover_my burner.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{125af905-c6e4-4f74-a5e2-87297c53a547}-hover_my burner.png</ZipFileName>
+              <DestinationFilename>%Skin%\DefaultWide\Media\hover_my burner.png</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+      <GroupItem Name="support">
+        <DisplayName>dep</DisplayName>
+        <DefaulChecked>true</DefaulChecked>
+        <Description>support</Description>
+        <Files>
+          <Items>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\burn.bat</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a97fa310-4391-4a1a-92a5-f818e68f300e}-burn.bat</ZipFileName>
+              <DestinationFilename>%Base%\Burner\burn.bat</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\colors.mgk</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{00a57a68-2841-407a-82f3-af3861bf3a51}-colors.mgk</ZipFileName>
+              <DestinationFilename>%Base%\Burner\colors.mgk</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygfreetype-6.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{63aac570-b5f3-4e72-926f-51bfdc243a16}-cygfreetype-6.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygfreetype-6.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygiconv-2.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{80b8ed33-e3db-4a9f-953b-6fbb11d87f53}-cygiconv-2.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygiconv-2.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygintl-1.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{c8141136-d7e6-48a1-a49c-8abfaa696078}-cygintl-1.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygintl-1.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygjasper-1-701-1.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a3a46c45-a99e-4010-b733-7c1dfd741774}-cygjasper-1-701-1.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygjasper-1-701-1.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygjpeg6b.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d533b2ba-c101-4671-8bbf-66a0f3362d79}-cygjpeg6b.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygjpeg6b.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygjpeg-62.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{cc600eb2-fbb6-47d5-a9ea-0c31c986fe1d}-cygjpeg-62.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygjpeg-62.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygpng12.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{184788b9-08f1-4a85-bdd6-bcafdcd69191}-cygpng12.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygpng12.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygwin1.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{20d890ae-107c-4655-9851-7a3b06bd55de}-cygwin1.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygwin1.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygwmflite-0-2-7.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{39626cfd-9086-49fe-a871-91c41eb027a5}-cygwmflite-0-2-7.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygwmflite-0-2-7.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygxml2-2.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{749bb2dc-7047-46d1-9cde-629b70cfe542}-cygxml2-2.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygxml2-2.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygz.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{00f68d4f-cc18-42ea-812a-004a84e0025f}-cygz.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\cygz.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\dvd.bat</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{af682c06-8fcf-48d2-8f93-1d21d5acfd53}-dvd.bat</ZipFileName>
+              <DestinationFilename>%Base%\Burner\dvd.bat</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\dvdauthor.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{8fe90035-e2d8-4f2c-b8a9-c6d34d28220d}-dvdauthor.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\dvdauthor.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\gm.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f7b8f022-56c9-4889-977b-de39b66bcd40}-gm.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\gm.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\iso.bat</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7437a816-608a-490c-ab25-4fb85c2fb44a}-iso.bat</ZipFileName>
+              <DestinationFilename>%Base%\Burner\iso.bat</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\jpeg2yuv.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{1cc6e5df-d801-4fa2-8bf2-d0cb13f64779}-jpeg2yuv.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\jpeg2yuv.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\libpng12.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{8750c4b9-7d12-4fc2-b07f-8b3db21fbaf7}-libpng12.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\libpng12.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\libz.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{aecf2909-d815-4897-b9a1-a79a2a109b62}-libz.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\libz.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\magic.mgk</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{da7b297a-769d-4b9e-965e-b7d3dcc74d3a}-magic.mgk</ZipFileName>
+              <DestinationFilename>%Base%\Burner\magic.mgk</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mat.bat</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7914d306-881d-447b-b8a3-8577e8b332ea}-mat.bat</ZipFileName>
+              <DestinationFilename>%Base%\Burner\mat.bat</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mencoder.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{1b852037-c008-4051-932d-6a31d1733dc1}-mencoder.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\mencoder.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mencoder_copy.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{051a0375-631a-49ee-baa8-91f91a48a6a0}-mencoder_copy.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\mencoder_copy.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\menuGen.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{e5907668-6c35-4745-a079-886e24490e68}-menuGen.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\menuGen.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mkisofs.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a7c0ea63-4fd2-43fb-91e0-d86862a0e996}-mkisofs.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\mkisofs.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\modules.mgk</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{7b0b4eda-33b0-42fe-90a5-a0d27942ff2d}-modules.mgk</ZipFileName>
+              <DestinationFilename>%Base%\Burner\modules.mgk</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mpeg2desc.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f31ef279-fb02-4960-83a8-9bc594336e5b}-mpeg2desc.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\mpeg2desc.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mpeg2enc.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{2aa34912-d4f4-463c-912f-f5bd4faa4e23}-mpeg2enc.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\mpeg2enc.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mpgtx.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{0d4020e1-80c2-448e-8d39-9ee17c906a8f}-mpgtx.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\mpgtx.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mplex.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ad6cf692-825f-4fcf-a13d-b7a2d2d00761}-mplex.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\mplex.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\msvcp60.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{2d0db5aa-29e1-46e9-9805-a0c64445dadb}-msvcp60.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\msvcp60.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\msvcrt.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f509be8f-b184-4812-8938-80ce63b369e6}-msvcrt.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\msvcrt.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\navButton.png</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ac45474c-aaea-42dc-817f-8448b069314a}-navButton.png</ZipFileName>
+              <DestinationFilename>%Base%\Burner\navButton.png</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\png2yuv.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6713095f-903e-4079-b87a-6e7add18020c}-png2yuv.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\png2yuv.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\pthreadGC2.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{d0c65997-dec4-4361-95a0-a67493cd5394}-pthreadGC2.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\pthreadGC2.dll</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\pxsup2dast.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{aecd67ee-ac32-4d2c-8ac0-8a688b76ebda}-pxsup2dast.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\pxsup2dast.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\scanbus.bat</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{6c6b8a29-d0fc-4fd9-82b0-6d178d912283}-scanbus.bat</ZipFileName>
+              <DestinationFilename>%Base%\Burner\scanbus.bat</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\Silence.ac3</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{f0c686af-c79e-4cb5-830d-4ba2b81f6e47}-Silence.ac3</ZipFileName>
+              <DestinationFilename>%Base%\Burner\Silence.ac3</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\spumux.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{a69476af-a41e-43c4-b733-b19c77572187}-spumux.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\spumux.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\spuunmux.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{08033507-92a5-47b1-9571-0c0c7dd77b0c}-spuunmux.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\spuunmux.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\submux.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{15774289-6688-4efc-8759-810c9ebba935}-submux.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\submux.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\tcmplex.exe</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{55a4050b-1939-47ee-b139-4bb8b553f061}-tcmplex.exe</ZipFileName>
+              <DestinationFilename>%Base%\Burner\tcmplex.exe</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\type.mgk</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{5c4fcc5a-c030-407c-b05b-45b0e919515c}-type.mgk</ZipFileName>
+              <DestinationFilename>%Base%\Burner\type.mgk</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\type-ghostscript.mgk</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{63d11825-0dcd-4312-b99c-fb95ff5ecc84}-type-ghostscript.mgk</ZipFileName>
+              <DestinationFilename>%Base%\Burner\type-ghostscript.mgk</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\type-solaris.mgk</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{b1d5fb6b-d3ed-47fe-849a-fe9d5f18a7c0}-type-solaris.mgk</ZipFileName>
+              <DestinationFilename>%Base%\Burner\type-solaris.mgk</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\type-windows.mgk</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{ab35339b-c646-48b0-a78a-0e9bfa1faa7e}-type-windows.mgk</ZipFileName>
+              <DestinationFilename>%Base%\Burner\type-windows.mgk</DestinationFilename>
+            </FileItem>
+            <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+              <Param1 />
+              <UpdateOption>OverwriteIfOlder</UpdateOption>
+              <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\zlib.dll</LocalFileName>
+              <ZipFileName>Installer{CopyFile}\{225cd585-d093-4e65-9219-ab68a718ae98}-zlib.dll</ZipFileName>
+              <DestinationFilename>%Base%\Burner\zlib.dll</DestinationFilename>
+            </FileItem>
+          </Items>
+        </Files>
+      </GroupItem>
+    </Items>
+  </Groups>
+  <Sections>
+    <Items>
+      <SectionItem Guid="20f6a5a5-6c60-4e23-b76d-c95df244fef8" Name="Welcome Screen" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>Welcome to the Extension Installer for [Name]</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Description">
+              <Value>This will install [Name] version [Version] on your computer.
+It is recommended that you close all other applications before continuing.
+Click Next to continue or Cancel to exit Setup.
+
+Changelog:
+Improved methods to get duration of file with mediainfo lib
+Some minor changes</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Welcome Screen</PanelName>
+        <WizardButtonsEnum>NextCancel</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="01ab2ac5-0ea3-4c5b-9c68-92e62c9ffc9f" Name="Install Section" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header Title">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>Header title</Description>
+            </SectionParam>
+            <SectionParam Name="Header description">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>Description of section, shown in under section title</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items>
+            <ActionItem Name="InstallFiles" ActionType="InstallFiles" ConditionGroup="">
+              <Params>
+                <Items />
+              </Params>
+              <ExecuteLocation>AfterPanelShow</ExecuteLocation>
+            </ActionItem>
+          </Items>
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Install Section</PanelName>
+        <WizardButtonsEnum>Next</WizardButtonsEnum>
+      </SectionItem>
+      <SectionItem Guid="0b5d3794-ee05-4895-a049-2fdff7b25559" Name="Setup Complete" ConditionGroup="">
+        <Params>
+          <Items>
+            <SectionParam Name="Header text">
+              <Value>The Extension Installer Wizard has successfully installed [Name].</Value>
+              <ValueType>String</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Left part image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description />
+            </SectionParam>
+            <SectionParam Name="Show radio buttons">
+              <Value />
+              <ValueType>Bool</ValueType>
+              <Description>Use radiobutton in place of combobox</Description>
+            </SectionParam>
+            <SectionParam Name="Header image">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>Image in upper right part</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+        <Actions>
+          <Items />
+        </Actions>
+        <IncludedGroups />
+        <PanelName>Setup Complete</PanelName>
+        <WizardButtonsEnum>Finish</WizardButtonsEnum>
+      </SectionItem>
+    </Items>
+  </Sections>
+  <Dependencies>
+    <Items>
+      <DependencyItem>
+        <Type>MediaPortal</Type>
+        <Id />
+        <MinVersion>
+          <Major>1</Major>
+          <Minor>1</Minor>
+          <Build>0</Build>
+          <Revision>6</Revision>
+        </MinVersion>
+        <MaxVersion>
+          <Major>1</Major>
+          <Minor>1</Minor>
+          <Build>0</Build>
+          <Revision>6</Revision>
+        </MaxVersion>
+        <WarnOnly>true</WarnOnly>
+        <Message>Need version of MediaPortal with version 1.1.0.6</Message>
+        <Name>MediaPortal</Name>
+      </DependencyItem>
+    </Items>
+  </Dependencies>
+  <GeneralInfo>
+    <Name>Burner</Name>
+    <Id>df4d06b5-b67b-413a-86de-3d161b2ae3d6</Id>
+    <Author>Mat, MP team, Sergey Filippov</Author>
+    <HomePage />
+    <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/plugin-burner-97106/</ForumPage>
+    <UpdateUrl>https://mp-plugins.svn.sourceforge.net/svnroot/mp-plugins/trunk/plugins/Burner/MpeRelease/update.xml</UpdateUrl>
+    <Version>
+      <Major>1</Major>
+      <Minor>0</Minor>
+      <Build>1</Build>
+      <Revision>4232</Revision>
+    </Version>
+    <ExtensionDescription>Burner will allow you to burn audio, video and data CDs and DVDs</ExtensionDescription>
+    <VersionDescription />
+    <DevelopmentStatus>Stable</DevelopmentStatus>
+    <OnlineLocation>https://mp-plugins.svn.sourceforge.net/svnroot/mp-plugins/trunk/plugins/Burner/MpeRelease/Burner_1.0.0.4223.mpe1</OnlineLocation>
+    <ReleaseDate>2011-05-26T19:33:19.421875+04:00</ReleaseDate>
+    <Tags>burn dvd cd</Tags>
+    <Location>I:\MP-Burner\MpeRelease\Burner_1.0.1.4232.mpe1</Location>
+    <Params>
+      <Items>
+        <SectionParam Name="Icon">
+          <Value />
+          <ValueType>File</ValueType>
+          <Description>The icon file of the package (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Online Icon">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
+        </SectionParam>
+        <SectionParam Name="Configuration file">
+          <Value />
+          <ValueType>Template</ValueType>
+          <Description>The file used to configure the extension.
+ If have .exe extension the will be executed
+ If have .dll extension used like MP plugin configuration</Description>
+        </SectionParam>
+        <SectionParam Name="Online Screenshots">
+          <Value />
+          <ValueType>String</ValueType>
+          <Description>Online stored screenshot urls separated by ; </Description>
+        </SectionParam>
+        <SectionParam Name="Force to uninstall on update">
+          <Value>yes</Value>
+          <ValueType>Bool</ValueType>
+          <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
+        </SectionParam>
+      </Items>
+    </Params>
+  </GeneralInfo>
+  <UniqueFileList>
+    <Items>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\Burner\bin\Debug\Burner.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c7900b3d-1d84-4a2b-9e4c-114e53898590}-Burner.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\Windows\Burner.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\Burner\bin\Debug\XPBurnComponent.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{235a2607-49ec-4fde-a2a4-1c002606ee3c}-XPBurnComponent.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\Windows\XPBurnComponent.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\MediaInfo.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{97205b23-774c-4606-99a6-3b8b6d9ec9fe}-MediaInfo.dll</ZipFileName>
+        <DestinationFilename>%Plugins%\Windows\MediaInfo.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\Skin\Blue3\myburner.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a402e729-251c-4784-ac30-0ee473c5bf09}-myburner.xml</ZipFileName>
+        <DestinationFilename>%Skin%\default\myburner.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\Skin\Blue3\Media\burn_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{3e39958d-dda9-4c9e-a77d-48e056024de6}-burn_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\default\Media\burn_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\Skin\Blue3\Media\hover_my burner.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f6d4ad48-0571-47fc-8d43-eadd8d2a941d}-hover_my burner.png</ZipFileName>
+        <DestinationFilename>%Skin%\Default\Media\hover_my burner.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\Skin\Blue3wide\myburner.xml</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{72f407d6-cbd8-4b5a-8b0d-14adbdb38b2c}-myburner.xml</ZipFileName>
+        <DestinationFilename>%Skin%\DefaultWide\myburner.xml</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\Skin\Blue3wide\Media\burn_logo.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c0974068-6e38-44c4-b92f-0e9343a26a36}-burn_logo.png</ZipFileName>
+        <DestinationFilename>%Skin%\DefaultWide\Media\burn_logo.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="false">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>trunk\Skin\Blue3wide\Media\hover_my burner.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{125af905-c6e4-4f74-a5e2-87297c53a547}-hover_my burner.png</ZipFileName>
+        <DestinationFilename>%Skin%\DefaultWide\Media\hover_my burner.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\burn.bat</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a97fa310-4391-4a1a-92a5-f818e68f300e}-burn.bat</ZipFileName>
+        <DestinationFilename>%Base%\Burner\burn.bat</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\colors.mgk</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{00a57a68-2841-407a-82f3-af3861bf3a51}-colors.mgk</ZipFileName>
+        <DestinationFilename>%Base%\Burner\colors.mgk</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygfreetype-6.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{63aac570-b5f3-4e72-926f-51bfdc243a16}-cygfreetype-6.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygfreetype-6.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygiconv-2.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{80b8ed33-e3db-4a9f-953b-6fbb11d87f53}-cygiconv-2.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygiconv-2.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygintl-1.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{c8141136-d7e6-48a1-a49c-8abfaa696078}-cygintl-1.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygintl-1.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygjasper-1-701-1.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a3a46c45-a99e-4010-b733-7c1dfd741774}-cygjasper-1-701-1.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygjasper-1-701-1.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygjpeg6b.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d533b2ba-c101-4671-8bbf-66a0f3362d79}-cygjpeg6b.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygjpeg6b.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygjpeg-62.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{cc600eb2-fbb6-47d5-a9ea-0c31c986fe1d}-cygjpeg-62.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygjpeg-62.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygpng12.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{184788b9-08f1-4a85-bdd6-bcafdcd69191}-cygpng12.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygpng12.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygwin1.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{20d890ae-107c-4655-9851-7a3b06bd55de}-cygwin1.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygwin1.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygwmflite-0-2-7.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{39626cfd-9086-49fe-a871-91c41eb027a5}-cygwmflite-0-2-7.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygwmflite-0-2-7.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygxml2-2.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{749bb2dc-7047-46d1-9cde-629b70cfe542}-cygxml2-2.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygxml2-2.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\cygz.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{00f68d4f-cc18-42ea-812a-004a84e0025f}-cygz.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\cygz.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\dvd.bat</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{af682c06-8fcf-48d2-8f93-1d21d5acfd53}-dvd.bat</ZipFileName>
+        <DestinationFilename>%Base%\Burner\dvd.bat</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\dvdauthor.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{8fe90035-e2d8-4f2c-b8a9-c6d34d28220d}-dvdauthor.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\dvdauthor.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\gm.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f7b8f022-56c9-4889-977b-de39b66bcd40}-gm.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\gm.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\iso.bat</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7437a816-608a-490c-ab25-4fb85c2fb44a}-iso.bat</ZipFileName>
+        <DestinationFilename>%Base%\Burner\iso.bat</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\jpeg2yuv.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{1cc6e5df-d801-4fa2-8bf2-d0cb13f64779}-jpeg2yuv.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\jpeg2yuv.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\libpng12.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{8750c4b9-7d12-4fc2-b07f-8b3db21fbaf7}-libpng12.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\libpng12.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\libz.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{aecf2909-d815-4897-b9a1-a79a2a109b62}-libz.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\libz.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\magic.mgk</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{da7b297a-769d-4b9e-965e-b7d3dcc74d3a}-magic.mgk</ZipFileName>
+        <DestinationFilename>%Base%\Burner\magic.mgk</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mat.bat</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7914d306-881d-447b-b8a3-8577e8b332ea}-mat.bat</ZipFileName>
+        <DestinationFilename>%Base%\Burner\mat.bat</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mencoder.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{1b852037-c008-4051-932d-6a31d1733dc1}-mencoder.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\mencoder.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mencoder_copy.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{051a0375-631a-49ee-baa8-91f91a48a6a0}-mencoder_copy.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\mencoder_copy.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\menuGen.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{e5907668-6c35-4745-a079-886e24490e68}-menuGen.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\menuGen.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mkisofs.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a7c0ea63-4fd2-43fb-91e0-d86862a0e996}-mkisofs.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\mkisofs.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\modules.mgk</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{7b0b4eda-33b0-42fe-90a5-a0d27942ff2d}-modules.mgk</ZipFileName>
+        <DestinationFilename>%Base%\Burner\modules.mgk</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mpeg2desc.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f31ef279-fb02-4960-83a8-9bc594336e5b}-mpeg2desc.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\mpeg2desc.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mpeg2enc.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{2aa34912-d4f4-463c-912f-f5bd4faa4e23}-mpeg2enc.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\mpeg2enc.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mpgtx.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{0d4020e1-80c2-448e-8d39-9ee17c906a8f}-mpgtx.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\mpgtx.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\mplex.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ad6cf692-825f-4fcf-a13d-b7a2d2d00761}-mplex.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\mplex.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\msvcp60.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{2d0db5aa-29e1-46e9-9805-a0c64445dadb}-msvcp60.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\msvcp60.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\msvcrt.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f509be8f-b184-4812-8938-80ce63b369e6}-msvcrt.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\msvcrt.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\navButton.png</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ac45474c-aaea-42dc-817f-8448b069314a}-navButton.png</ZipFileName>
+        <DestinationFilename>%Base%\Burner\navButton.png</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\png2yuv.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6713095f-903e-4079-b87a-6e7add18020c}-png2yuv.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\png2yuv.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\pthreadGC2.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{d0c65997-dec4-4361-95a0-a67493cd5394}-pthreadGC2.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\pthreadGC2.dll</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\pxsup2dast.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{aecd67ee-ac32-4d2c-8ac0-8a688b76ebda}-pxsup2dast.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\pxsup2dast.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\scanbus.bat</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{6c6b8a29-d0fc-4fd9-82b0-6d178d912283}-scanbus.bat</ZipFileName>
+        <DestinationFilename>%Base%\Burner\scanbus.bat</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\Silence.ac3</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{f0c686af-c79e-4cb5-830d-4ba2b81f6e47}-Silence.ac3</ZipFileName>
+        <DestinationFilename>%Base%\Burner\Silence.ac3</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\spumux.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{a69476af-a41e-43c4-b733-b19c77572187}-spumux.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\spumux.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\spuunmux.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{08033507-92a5-47b1-9571-0c0c7dd77b0c}-spuunmux.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\spuunmux.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\submux.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{15774289-6688-4efc-8759-810c9ebba935}-submux.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\submux.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\tcmplex.exe</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{55a4050b-1939-47ee-b139-4bb8b553f061}-tcmplex.exe</ZipFileName>
+        <DestinationFilename>%Base%\Burner\tcmplex.exe</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\type.mgk</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{5c4fcc5a-c030-407c-b05b-45b0e919515c}-type.mgk</ZipFileName>
+        <DestinationFilename>%Base%\Burner\type.mgk</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\type-ghostscript.mgk</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{63d11825-0dcd-4312-b99c-fb95ff5ecc84}-type-ghostscript.mgk</ZipFileName>
+        <DestinationFilename>%Base%\Burner\type-ghostscript.mgk</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\type-solaris.mgk</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{b1d5fb6b-d3ed-47fe-849a-fe9d5f18a7c0}-type-solaris.mgk</ZipFileName>
+        <DestinationFilename>%Base%\Burner\type-solaris.mgk</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\type-windows.mgk</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{ab35339b-c646-48b0-a78a-0e9bfa1faa7e}-type-windows.mgk</ZipFileName>
+        <DestinationFilename>%Base%\Burner\type-windows.mgk</DestinationFilename>
+      </FileItem>
+      <FileItem InstallType="CopyFile" SystemFile="false" Modified="true">
+        <Param1 />
+        <UpdateOption>OverwriteIfOlder</UpdateOption>
+        <LocalFileName>..\Program Files\Team MediaPortal\MediaPortal\Burner\zlib.dll</LocalFileName>
+        <ZipFileName>Installer{CopyFile}\{225cd585-d093-4e65-9219-ab68a718ae98}-zlib.dll</ZipFileName>
+        <DestinationFilename>%Base%\Burner\zlib.dll</DestinationFilename>
+      </FileItem>
+    </Items>
+  </UniqueFileList>
+  <ProjectSettings>
+    <FolderGroups />
+    <ProjectFilename>I:\MP-Burner\burner.xmp2</ProjectFilename>
+    <UpdatePath1>I:\MP-Burner\MpeRelease\update.xml</UpdatePath1>
+    <UpdatePath2 />
+    <UpdatePath3 />
+  </ProjectSettings>
+</PackageClass>
