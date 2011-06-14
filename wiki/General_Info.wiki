@@ -6,7 +6,7 @@ Burner is a plugin for [http://team-mediaportal.com Team Media Portal]. This plu
 
 == Authors ==
 Rolenof, 
-Mat
+egonspengleruk
 
 = Installation =
 
