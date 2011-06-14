@@ -1,0 +1,38 @@
+#summary General info and installation
+
+= Introduction =
+
+Burner is a plugin for [http://team-mediaportal.com Team Media Portal]. This plugin allows you to burn dvd video (converts video files to dvd video structure), audio cd (converts mp3 to valid audio cd) and data cd and dvd.
+
+== Authors ==
+Rolenof, 
+Mat
+
+= Installation =
+
+== Requirements ==
+  # Media Portal (currently supported only 1.2 beta)
+  # About 5gb free space for temp files (if you're going to write dvd video disks)
+  # DVD-Writer
+
+== Installing Burner ==
+Ther are 2 ways to install Burner plugin - manual (not recomended) and througth Extension Installer (recomended).
+
+=== Extension Installer ===
+  # Run the Extension Installer
+  # Update extension list 
+  # Use search field to find Burner
+  # Press install and choose the latest version
+  # Installer will guide you throught installation process
+
+
+=== Manual ===
+  # Download latest version of Burner plugin (Burner_manual) and support packege from [http://code.google.com/p/burner-for-mp/downloads/list here].
+  # Unpack Burner_manual to MediaPortal\plugins\Windows\
+  # Unpack support packege to MediaPortal\
+
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
