@@ -323,6 +323,8 @@ namespace Burner
               case States.STATE_MAKE_AUDIO_CD:
                 burnType = BurnTypes.AUDIO_CD;
                 BurnCD(burnType);
+                /*Clear();
+                Load(GUIGraphicsContext.Skin + @"\myburner.xml");*/
                 break;
 
                 // If on Data CD Menu

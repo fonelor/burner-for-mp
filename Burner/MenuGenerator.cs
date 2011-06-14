@@ -28,14 +28,7 @@ namespace Burner
             AllFinished = 6
         }
 
- /*       private enum MenuSteps
-        {
-            GenBackground = 0,
-            Buttons = 1,
-            Text = 2
-        }*/
-
-        #endregion
+         #endregion
 
         # region Class Variables
 
@@ -46,8 +39,6 @@ namespace Burner
         private List<string> _SubMenuStr; // 'Main menu','Play Show','Episodes'
         private bool _InDebugMode; // true if in debug mode
         private MenuGenarationState _MenuGenState; // States for whole menu generation
-   //     private MenuSteps _CurMenuSteps; // states for current menu (sub or main)
-   //     private int _curNum; // will hold number of current show
         private bool _AllFinished; // will be true when all submenus will be finished
         private Image menuBackground; // will store background image
         private Image Button; // will store button image for menus
@@ -72,7 +63,6 @@ namespace Burner
             _ShowNames = ShowNames;
             _SubMenuStr = SubMenuStr;
             _InDebugMode = DebugMode;
-//            _curNum = 0;
 
             _MenuGenState = MenuGenarationState.MainMenuGen;
 
