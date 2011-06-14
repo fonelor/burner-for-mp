@@ -154,10 +154,10 @@
       <spinPosX>1040</spinPosX>
       <spinPosY>387</spinPosY>
       <height>312</height>
-      <onright>2</onright>
+      <onright>30</onright>
       <onleft>2</onleft>
-      <onup>4</onup>
-      <ondown>2</ondown>
+      <onup>20</onup>
+      <ondown>20</ondown>
     </control>
     <control>
       <description>copy listcontrol</description>
@@ -167,9 +167,9 @@
       <posY>431</posY>
       <height>250</height>
       <onright>2</onright>
-      <onleft>2</onleft>
-      <onup>4</onup>
-      <ondown>2</ondown>
+      <onleft>20</onleft>
+      <onup>30</onup>
+      <ondown>30</ondown>
     </control>
   </controls>
 </window>
