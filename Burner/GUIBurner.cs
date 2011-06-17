@@ -1,6 +1,6 @@
-#region Copyright (C) 2005-2010 Team MediaPortal
+#region Copyright (C) 2005-2011 Team MediaPortal
 
-// Copyright (C) 2005-2010 Team MediaPortal
+// Copyright (C) 2005-2011 Team MediaPortal
 // http://www.team-mediaportal.com
 // 
 // MediaPortal is free software: you can redistribute it and/or modify
@@ -276,8 +276,21 @@ namespace Burner
             switch (currentState)
             {
               case States.STATE_MAIN: // If Main change Folder to Video
-                currentState = States.STATE_VIDEO;
-                UpdateButtons();
+                /*currentState = States.STATE_VIDEO;
+                UpdateButtons();*/
+                    GUIBurnerVideoMod videoMod = (GUIBurnerVideoMod)GUIWindowManager.GetWindow(GUIBurnerVideoMod.ID);
+                    List<string> Buttons = new List<string>();
+                    List<string> ShowNames = new List<string>();
+                    ShowNames.Add("1Show");
+                    Buttons.Add("Main Menu");
+                    Buttons.Add("Play Show");
+                    Buttons.Add("Episodes");
+                    Buttons.Add("Disk Name");
+                    GUIBurnerVideoMod.Quality q = GUIBurnerVideoMod.Quality.SP;
+                    videoMod.Start(ShowNames, Buttons, q);
+                    GUIWindowManager.ActivateWindow(GUIBurnerVideoMod.ID);
+                    /*videoMod.DoModal(GetID); //FIXME
+                    videoMod.PageDestroy();*/
                 break;
 
               default:
