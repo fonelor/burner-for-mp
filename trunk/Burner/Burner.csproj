@@ -57,6 +57,7 @@
     <Compile Include="BurnDataDVD.cs" />
     <Compile Include="BurnDVDEvents.cs" />
     <Compile Include="BurnVideoDVD.cs" />
+    <Compile Include="GUIBurnerVideoMod.cs" />
     <Compile Include="MenuGenerator.cs" />
     <Compile Include="GUIBurner.cs" />
     <Compile Include="MadlldlibWrapper.cs" />
