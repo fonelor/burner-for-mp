@@ -39,13 +39,13 @@ using MediaInfoLib;
 
 namespace Burner
 {
-    public class GUIBurnerVideoMod : GUIInternalWindow
+    public class GUIBurnerVideoMod : GUIInternalOverlayWindow
     {
         #region Class Variables
 
         public const int ID = 762; // Holds the ID of this Window
-        List<string> _ShowNames;
-        List<string> _Buttons;
+        private ArrayList _ShowNames = new ArrayList();
+        private List<string> _Buttons;
         Quality _quality;
 
         #endregion
@@ -105,8 +105,14 @@ namespace Burner
 
                     for (int i = 0; i < _ShowNames.Count; i++)
                     {
-                        GUIListItem Item = new GUIListItem(_ShowNames[i]);
+                        GUIListItem Item = new GUIListItem((GUIListItem)_ShowNames[i]);
                         GUIControl.AddListItemControl(GetID, (int)Controls.SHOW_NAMES, Item);
+                    }
+                    if (_Buttons.Count == 0)
+                    {
+                        _Buttons.Add("Main menu");
+                        _Buttons.Add("Play Show");
+                        _Buttons.Add("Episodes");
                     }
 
                     GUIControl.SetControlLabel(GetID, (int)Controls.MAIN_MENU, _Buttons[0]);
@@ -236,7 +242,7 @@ namespace Burner
 
                     #region Background
 
-                    if (iControl == (int)Controls.BACKGROUND_IMAGE)
+                    /*if (iControl == (int)Controls.BACKGROUND_IMAGE)
                     {
                         GUIFacadeControl
                         GUIDialogFile dlgFile = (GUIDialogFile)GUIWindowManager.GetWindow((int)Window.WINDOW_DIALOG_FILE);
@@ -252,14 +258,34 @@ namespace Burner
                             //GUIPropertyManager.SetProperty("#background_menu", dlgFile.GetDestinationDir());
                         }
 
+                    }*/
+                    #endregion
+
+                    #region Show Names
+
+                    if (iControl == (int)Controls.SHOW_NAMES)
+                    {
+                        VirtualKeyboard VrtKey = (VirtualKeyboard)GUIWindowManager.GetWindow((int)Window.WINDOW_VIRTUAL_KEYBOARD);
+                        if (VrtKey != null)
+                        {
+                            VrtKey.Reset();
+                            VrtKey.Text = GUIControl.GetSelectedListItem(GetID, (int)Controls.SHOW_NAMES).Label;
+                            VrtKey.DoModal(GetID);
+                            ((GUIListItem)_ShowNames[(int)GUIControl.GetSelectedListItem(GetID, (int)Controls.SHOW_NAMES).ItemId]).Label = VrtKey.Text;
+                            GUIControl.GetSelectedListItem(GetID, (int)Controls.SHOW_NAMES).Label = VrtKey.Text;
+                        }
+
                     }
+
                     #endregion
 
                     #region Done Button
 
                     if (iControl == (int)Controls.DONE)
                     {
+                        GUIBurner brnWind = (GUIBurner)GUIWindowManager.GetWindow(GUIWindowManager.GetPreviousActiveWindow());
                         GUIWindowManager.ShowPreviousWindow();
+                        brnWind.LoadParameters(_ShowNames);
                         return true;
                     }
 
@@ -282,7 +308,7 @@ namespace Burner
         /// <param name="ShowNames">List with names of Shows</param>
         /// <param name="Buttons">List with "Main Menu", "Play Show", "Episodes", disk name</param>
         /// <param name="q">Default quality</param>
-        public void Start(List<string> ShowNames, List<string> Buttons, Quality q)
+        public void Start(ArrayList ShowNames, List<string> Buttons, Quality q)
         {
             _ShowNames = ShowNames;
             _Buttons = Buttons;
