@@ -61,7 +61,7 @@ namespace Burner
       CONTROL_CD_DETAILS = 50
     } ;
 
-    private enum States
+    public enum States
     {
       STATE_MAIN = 0,
       STATE_VIDEO,
@@ -150,6 +150,12 @@ namespace Burner
     public static int soundFileSize = 0;
     private static long lStartTime = 0;
 
+    public List<string> Buttons = new List<string>();
+    public ArrayList ShowNames = new ArrayList();
+    public GUIBurnerVideoMod.Quality q = GUIBurnerVideoMod.Quality.SP;
+
+    public const int ID = 761;
+
     // Convert to short pathnames (madlldlib)
     [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
     [return: MarshalAs(UnmanagedType.U4)]
@@ -165,7 +171,7 @@ namespace Burner
 
     public GUIBurner()
     {
-        GetID = 760;//(int)Window.WINDOW_MY_BURNER;
+        GetID = ID;//(int)Window.WINDOW_MY_BURNER;
     }
 
     #endregion
@@ -239,6 +245,17 @@ namespace Burner
       base.OnAction(action);
     }
 
+    public void LoadParameters(ArrayList _Files)
+    {
+        ShowList();
+        for (int i = 0; i < _Files.Count; i++)
+        {
+            GUIControl.AddListItemControl(GetID, (int)Controls.CONTROL_LIST_COPY, (GUIListItem)_Files[i]);
+        }
+
+        UpdatePercentageFullDisplay();
+    }
+
     public override bool OnMessage(GUIMessage message)
     {
       switch (message.Message)
@@ -254,9 +271,9 @@ namespace Burner
           GUIPropertyManager.SetProperty("#burner_size", " ");
           GUIPropertyManager.SetProperty("#burner_info", " ");
           GUIPropertyManager.SetProperty("#convert_info", " ");
-          totalSize = 0;
-          totalTime = 0;
-          currentState = States.STATE_MAIN;
+          //totalSize = 0;
+          //totalTime = 0;
+          //currentState = States.STATE_MAIN;
           UpdateButtons();
 
           return true;
@@ -276,21 +293,8 @@ namespace Burner
             switch (currentState)
             {
               case States.STATE_MAIN: // If Main change Folder to Video
-                /*currentState = States.STATE_VIDEO;
-                UpdateButtons();*/
-                    GUIBurnerVideoMod videoMod = (GUIBurnerVideoMod)GUIWindowManager.GetWindow(GUIBurnerVideoMod.ID);
-                    List<string> Buttons = new List<string>();
-                    List<string> ShowNames = new List<string>();
-                    ShowNames.Add("1Show");
-                    Buttons.Add("Main Menu");
-                    Buttons.Add("Play Show");
-                    Buttons.Add("Episodes");
-                    Buttons.Add("Disk Name");
-                    GUIBurnerVideoMod.Quality q = GUIBurnerVideoMod.Quality.SP;
-                    videoMod.Start(ShowNames, Buttons, q);
-                    GUIWindowManager.ActivateWindow(GUIBurnerVideoMod.ID);
-                    /*videoMod.DoModal(GetID); //FIXME
-                    videoMod.PageDestroy();*/
+                currentState = States.STATE_VIDEO;
+                UpdateButtons();
                 break;
 
               default:
@@ -403,6 +407,21 @@ namespace Burner
                 ShowList();
                 CdInfo();
                 break;
+
+              case States.STATE_MAKE_VIDEO_DVD:
+                // Copy contents of burn list
+                int count = GUIControl.GetItemCount(GetID, (int)Controls.CONTROL_LIST_COPY);
+                for (int i = 0; i < count; i++)
+                {
+                    GUIListItem cItem = GUIControl.GetListItem(GetID, (int)Controls.CONTROL_LIST_COPY, i);
+                    ShowNames.Add(cItem);
+                }
+                
+                GUIBurnerVideoMod videoMod = (GUIBurnerVideoMod)GUIWindowManager.GetWindow(GUIBurnerVideoMod.ID);
+                videoMod.Start(ShowNames, Buttons, q);
+                GUIWindowManager.ActivateWindow(GUIBurnerVideoMod.ID);
+                break;
+
             }
             return true;
 
@@ -1119,6 +1138,11 @@ namespace Burner
           GUIControl.SetControlLabel(GetID, (int)Controls.CONTROL_BUTTON3, GUILocalizeStrings.Get(2145));
           // Import Current Playlist
           GUIControl.ShowControl(GetID, (int)Controls.CONTROL_BUTTON3);
+
+          GUIControl.EnableControl(GetID, (int)Controls.CONTROL_BUTTON4);
+          GUIControl.SetControlLabel(GetID, (int)Controls.CONTROL_BUTTON4, "Customize Menu");
+          // Customize menu
+          GUIControl.ShowControl(GetID, (int)Controls.CONTROL_BUTTON4);
 
           break;
 
