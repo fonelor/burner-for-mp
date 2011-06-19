@@ -245,13 +245,17 @@ namespace Burner
       base.OnAction(action);
     }
 
-    public void LoadParameters(ArrayList _Files)
+    public void LoadParameters(ArrayList _Files, int _totaltime)
     {
         ShowList();
+
+        GUIControl.ClearControl(GetID, (int)Controls.CONTROL_LIST_COPY);
+
         for (int i = 0; i < _Files.Count; i++)
         {
             GUIControl.AddListItemControl(GetID, (int)Controls.CONTROL_LIST_COPY, (GUIListItem)_Files[i]);
         }
+        totalTime = _totaltime;
 
         UpdatePercentageFullDisplay();
     }
@@ -271,9 +275,7 @@ namespace Burner
           GUIPropertyManager.SetProperty("#burner_size", " ");
           GUIPropertyManager.SetProperty("#burner_info", " ");
           GUIPropertyManager.SetProperty("#convert_info", " ");
-          //totalSize = 0;
-          //totalTime = 0;
-          //currentState = States.STATE_MAIN;
+          
           UpdateButtons();
 
           return true;
@@ -410,6 +412,8 @@ namespace Burner
 
               case States.STATE_MAKE_VIDEO_DVD:
                 // Copy contents of burn list
+                ShowNames.Clear();
+
                 int count = GUIControl.GetItemCount(GetID, (int)Controls.CONTROL_LIST_COPY);
                 for (int i = 0; i < count; i++)
                 {
@@ -418,7 +422,7 @@ namespace Burner
                 }
                 
                 GUIBurnerVideoMod videoMod = (GUIBurnerVideoMod)GUIWindowManager.GetWindow(GUIBurnerVideoMod.ID);
-                videoMod.Start(ShowNames, Buttons, q);
+                videoMod.Start(ShowNames, Buttons, q, totalTime);
                 GUIWindowManager.ActivateWindow(GUIBurnerVideoMod.ID);
                 break;
 
@@ -512,7 +516,10 @@ namespace Burner
 
                 MusicTag tag = TagReader.ReadTag(pItem.Path);
                 pItem.MusicTag = tag;
-                totalTime = totalTime + tag.Duration; // FIXME there is a bug when MusicTag can't read info about file
+
+                getDuration(pItem);
+
+                totalTime = totalTime + pItem.Duration; // FIXME there is a bug when MusicTag can't read info about file
               }
 
               UpdatePercentageFullDisplay();
@@ -641,22 +648,9 @@ namespace Burner
                 //  totalTime = totalTime + tag.Duration;
                 }
 
-                // For some types of video MusicTag doesn't work, so we use mediainfo lib.
-                // Should be replaced with internal systems in media portal, when there will be support of all types of files
-                MI.Open(pItem.Path);
+                getDuration(pItem);
 
-                string str = MI.Get(0, 0, "Duration");
-                int itemDuration = 0;
-                try
-                {
-                    itemDuration = int.Parse(str.Substring(0, str.IndexOf(".")))/1000;
-                } catch (Exception ex) {
-                    itemDuration = int.Parse(str)/1000;
-                }
-                totalTime = totalTime + itemDuration;
-                pItem.Duration = itemDuration;
-
-                MI.Close();
+                totalTime = totalTime + pItem.Duration;
                
                 if (SpaceOnMedia() == true) // Check if there is enough room on the CD/DVD (depending on currentState)
                 {
@@ -666,7 +660,7 @@ namespace Burner
                 {
                   totalSize = totalSize - pItem.FileInfo.Length;
                  // totalTime = totalTime - tag.Duration;
-                  totalTime = totalTime - itemDuration;
+                  totalTime = totalTime - pItem.Duration;
                 }
 
                 UpdatePercentageFullDisplay();
@@ -920,6 +914,33 @@ namespace Burner
 
       currentFolder = folder;
     }
+
+      /// <summary>
+      /// Get duration of this video file, and set it parametrs
+      /// </summary>
+      /// <param name="pItem">item</param>
+    private void getDuration(GUIListItem pItem)
+    {
+        // For some types of video MusicTag doesn't work, so we use mediainfo lib.
+        // Should be replaced with internal systems in media portal, when there will be support of all types of files
+        MI.Open(pItem.Path);
+
+        string str = MI.Get(0, 0, "Duration");
+        int itemDuration = 0;
+        try
+        {
+            itemDuration = int.Parse(str.Substring(0, str.IndexOf("."))) / 1000;
+        }
+        catch (Exception ex)
+        {
+            itemDuration = int.Parse(str) / 1000;
+        }
+        pItem.Duration = itemDuration;
+
+        MI.Close();
+
+    }
+
 
     private void LoadDriveListControl()
     {
@@ -1296,25 +1317,10 @@ namespace Burner
             // Commented until MusicTag supports more formats like ts, flv and other.
             //  totalTime = totalTime + tag.Duration
         }
-        
-        // For some types of video MusicTag doesn't work, so we use mediainfo lib.
-        // Should be replaced with internal systems in media portal, when there will be support of all types of files
-        MI.Open(Item.Path);
 
-        string str = MI.Get(0, 0, "Duration");
-        int itemDuration = 0;
-        try
-        {
-            itemDuration = int.Parse(str.Substring(0, str.IndexOf("."))) / 1000;
-        }
-        catch (Exception ex)
-        {
-            itemDuration = int.Parse(str) / 1000;
-        }
-        totalTime = totalTime + itemDuration;
-        Item.Duration = itemDuration;
+        getDuration(Item);
 
-        MI.Close();
+        totalTime = totalTime + Item.Duration;
 
         if (SpaceOnMedia() == true) // Check if there is enough room on the CD/DVD (depending on currentState)
         {
@@ -1324,7 +1330,7 @@ namespace Burner
         {
             totalSize = totalSize - Item.FileInfo.Length;
             // totalTime = totalTime - tag.Duration;
-            totalTime = totalTime - itemDuration;
+            totalTime = totalTime - Item.Duration;
         }
 
         UpdatePercentageFullDisplay();

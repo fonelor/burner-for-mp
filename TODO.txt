@@ -1,4 +1,0 @@
-+	Plugin maker: remove MediaInfo.dll
-+	Plugin maker: remove unneeded dependencies
-+	Make screen with background choosing
-+	Make screen with selection of bitrate
