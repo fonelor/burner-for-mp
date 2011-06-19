@@ -61,6 +61,15 @@ namespace Burner
             _PathToBackground = PathToBackground;
             _PathToTempFolder = PathToTempFolder;
             _ShowNames = ShowNames;
+
+            if (SubMenuStr.Count == 0)
+            {
+
+                SubMenuStr.Add("Main menu");
+                SubMenuStr.Add("Play Show");
+                SubMenuStr.Add("Episodes");
+
+            }
             _SubMenuStr = SubMenuStr;
             _InDebugMode = DebugMode;
 
@@ -317,7 +326,7 @@ namespace Burner
                 // Step 2. Add text and make stamp image
                 // Add Episodes and Name of the show
                 //subMenuStamp = CombineImages(subMenuStamp, Button, 10, 20);
-                menuWithText = PutTextOnImage(menuWithText, _SubMenuStr[0] + " " + _ShowNames[curMenu], 60, 20, 26);
+                menuWithText = PutTextOnImage(menuWithText, _SubMenuStr[2] + " " + _ShowNames[curMenu], 60, 20, 26);
 
                 // Add Play Show
                 subMenuStamp = CombineImages(subMenuStamp, Button, 10, 400);
@@ -325,7 +334,7 @@ namespace Burner
 
                 // Add Main menu
                 subMenuStamp = CombineImages(subMenuStamp, Button, 10, 450);
-                menuWithText = PutTextOnImage(menuWithText, _SubMenuStr[2], 60, 450, 26);
+                menuWithText = PutTextOnImage(menuWithText, _SubMenuStr[0], 60, 450, 26);
 
                 // Save stamp image and background
                 if (!savePng(Path.Combine(_PathToTempFolder, "menuSubStamp." + curMenu.ToString() + ".png"),

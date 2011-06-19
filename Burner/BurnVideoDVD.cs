@@ -71,6 +71,9 @@ namespace Burner
     private List<string> _FilesToBurn = new List<string>(); // Converted Files ready to Burn
     private string _TvFormat = string.Empty; // "PAL" or "NTSC"
     private string _AspectRatio = string.Empty; // "4/3" or "16/9"
+    private List<string> _ShowNames; // Holds show names
+    private List<string> _Buttons; // Holds names of buttons on menu and name of disk
+    private GUIBurnerVideoMod.Quality _quality; // Holds quality parametr for mencoder
 
     #endregion
 
@@ -112,7 +115,7 @@ namespace Burner
     ///<param name="RecorderDrive">The drive letter of the Recorder</param>
     ///<param name="DummyBurn">Do everything except the burn. Used for debugging</param>
     public BurnVideoDVD(ArrayList FileNames, string PathToTempFolder, string TVFormat, string AspectRatio,
-                        string PathtoDVDBurnExe, bool DebugMode, string RecorderDrive, bool DummyBurn)
+                        string PathtoDVDBurnExe, bool DebugMode, string RecorderDrive, bool DummyBurn, ArrayList ShowNames, List<string> Buttons, GUIBurnerVideoMod.Quality quality)
     {
       _InDebugMode = DebugMode;
 
@@ -121,6 +124,13 @@ namespace Burner
       {
         _BurnTheDVD = false;
       }
+
+      for (int i = 0; i < ShowNames.Count; i++)
+          _ShowNames[i] = ((GUIListItem)ShowNames[i]).Label;
+
+      _Buttons = Buttons;
+
+      _quality = quality;
 
       pBurnVideoDVD(FileNames, PathToTempFolder, TVFormat, AspectRatio, PathtoDVDBurnExe, RecorderDrive);
     }
@@ -365,17 +375,9 @@ namespace Burner
       {
         Log.Error(ex.ToString());
       }*/
-        List<string> FileMenu = new List<string>();
-        FileMenu.Add("Episodes");
-        FileMenu.Add("Play Show");
-        FileMenu.Add("Main menu");
-
-        List<string> ShowNames = new List<string>();
-        for (int i = 0; i < _FileNames.Count; i++)
-            ShowNames.Add(Path.GetFileNameWithoutExtension(_FileNames[i].ToString()));
   
-        MenuGenerator MenuGen = new MenuGenerator(ShowNames, Config.GetFile(Config.Dir.Skin, @"Default\Media\", "background.png"), 
-                _TempFolderPath, FileMenu, true);
+        MenuGenerator MenuGen = new MenuGenerator(_ShowNames, Config.GetFile(Config.Dir.Skin, @"Default\Media\", "background.png"), 
+                _TempFolderPath, _Buttons, true);
         MenuGen.Start();
 
         // No Actual external app running to Exit so 
@@ -540,6 +542,10 @@ namespace Burner
         }
 
         string discName = string.Format("\"MP-DVD-{0}\"", DateTime.Now.ToShortDateString());
+       
+          if (_Buttons[3] != null)
+            discName = "\"" + _Buttons[3] + "\"";
+
         string imgFolder = Path.Combine(_TempFolderPath, "DVD_Image");
         string isofile = Path.Combine(_TempFolderPath, "dvd.iso");
 
@@ -687,6 +693,28 @@ namespace Burner
 
             _CurrentProcess = "Video file conversion - mencoder.exe";
 
+            int maxBitrate = 9800;
+            int bitRate = 5000;
+
+            // set quality
+            switch (_quality)
+            {
+                case GUIBurnerVideoMod.Quality.SP:
+                    maxBitrate = 9800;
+                    bitRate = 5000;
+                    break;
+
+                case GUIBurnerVideoMod.Quality.LP:
+                    maxBitrate = 5000;
+                    bitRate = 2500;
+                    break;
+
+                case GUIBurnerVideoMod.Quality.EP:
+                    maxBitrate = 2600;
+                    bitRate = 1400;
+                    break;
+            }
+
             try
             {
               BurnerProcess = new Process();
@@ -707,13 +735,17 @@ namespace Burner
               if (_TvFormat.ToUpper() == "PAL")
               {
                 args =
-                  "-oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=720:576,harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:vrc_buf_size=1835:vrc_maxrate=2600:vbitrate=1400:keyint=15:acodec=ac3:abitrate=192:aspect=" +
+                  "-oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=720:576,harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:vrc_buf_size=1835:vrc_maxrate=" + 
+                  maxBitrate.ToString() + ":vbitrate=" + 
+                  bitRate.ToString() + ":keyint=15:acodec=ac3:abitrate=192:aspect=" +
                   _AspectRatio + " -ofps 25 -o \"" + DestinationFilePath + "\\F" + _FileNameCount.ToString() + ".mpg" + "\"  \"" + SourceFilePath + "\" "; 
               }
               else
               {
                 args =
-                  "-oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=720:480,harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:vrc_buf_size=1835:vrc_maxrate=9800:vbitrate=5000:keyint=18:acodec=ac3:abitrate=192:aspect=" +
+                  "-oac lavc -ovc lavc -of mpeg -mpegopts format=dvd:tsaf -vf scale=720:480,harddup -srate 48000 -af lavcresample=48000 -lavcopts vcodec=mpeg2video:vrc_buf_size=1835:vrc_maxrate=" + 
+                  maxBitrate.ToString() + ":vbitrate=" + 
+                  bitRate.ToString() + ":keyint=18:acodec=ac3:abitrate=192:aspect=" +
                   _AspectRatio + " -ofps 30000/1001 -o \"" + DestinationFilePath + "\\F" + _FileNameCount.ToString() + ".mpg" + "\"  \"" + SourceFilePath + "\" "; 
               }
 
