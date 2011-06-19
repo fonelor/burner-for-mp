@@ -245,19 +245,30 @@ namespace Burner
       base.OnAction(action);
     }
 
-    public void LoadParameters(ArrayList _Files, int _totaltime)
+    public void LoadParameters(ArrayList _Files, int _totaltime, GUIBurnerVideoMod.Quality _q)
     {
         ShowList();
 
+        // Update contents of COPY_LIST
+        ShowNames = _Files;
         GUIControl.ClearControl(GetID, (int)Controls.CONTROL_LIST_COPY);
 
         for (int i = 0; i < _Files.Count; i++)
         {
             GUIControl.AddListItemControl(GetID, (int)Controls.CONTROL_LIST_COPY, (GUIListItem)_Files[i]);
         }
+       
+        // Update total time and procentage
         totalTime = _totaltime;
 
+        dvdMaxTime = getMaxTime(_q);
+        max = dvdMaxTime;
+
         UpdatePercentageFullDisplay();
+
+        // Update quality parameter
+        q = _q;
+
     }
 
     public override bool OnMessage(GUIMessage message)
@@ -941,6 +952,24 @@ namespace Burner
 
     }
 
+    private int getMaxTime(GUIBurnerVideoMod.Quality q)
+    {
+        switch (q)
+        {
+            case GUIBurnerVideoMod.Quality.SP:
+                return 7920;
+
+            case GUIBurnerVideoMod.Quality.LP:
+                return 13200;
+
+            case GUIBurnerVideoMod.Quality.EP:
+                return 22920;
+        }
+
+        return 7920;
+
+    }
+
 
     private void LoadDriveListControl()
     {
@@ -1431,7 +1460,7 @@ namespace Burner
             }
 
             VideoDvdBurner = new BurnVideoDVD(FilePathsToBurn, strTempFolder, strTvFormat, strAspectRatio, dvdBurnFolder,
-                                              LeaveFilesForDebugging, recorderdrive, DummyBurn);
+                                              LeaveFilesForDebugging, recorderdrive, DummyBurn, ShowNames, Buttons, q);
 
             //Listen for some events
             VideoDvdBurner.FileFinished += new BurnVideoDVD.FileFinishedEventHandler(DVDBurner_FileFinished);

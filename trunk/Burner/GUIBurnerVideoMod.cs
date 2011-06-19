@@ -116,6 +116,7 @@ namespace Burner
                         _Buttons.Add("Main menu");
                         _Buttons.Add("Play Show");
                         _Buttons.Add("Episodes");
+                        _Buttons.Add(string.Format("MP-DVD-{0}", DateTime.Now.ToShortDateString()));
                     }
 
                     GUIControl.SetControlLabel(GetID, (int)Controls.MAIN_MENU, _Buttons[0]);
@@ -123,6 +124,8 @@ namespace Burner
                     GUIControl.SetControlLabel(GetID, (int)Controls.EPISODES, _Buttons[2]);
 
                     UpdateTime(_quality);
+
+                    GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, "Quality: " + _quality.ToString());
 
                     return true;
 
@@ -150,32 +153,26 @@ namespace Burner
                             dlgSelectBitrate.Add("EP: 6h 22min");
                             dlgSelectBitrate.DoModal(GetID);
 
-                            string newtitle = "";
-                            
                             switch (dlgSelectBitrate.SelectedLabelText)
                             {
                                 case "SP: 2h 12min":
-                                    newtitle = "Quality: SP";
                                     tmpQ = Quality.SP;
                                     break;
                                 case "LP: 3h 40min":
-                                    newtitle = "Quality: LP";
                                     tmpQ = Quality.LP;
                                     break;
                                 case "EP: 6h 22min":
-                                    newtitle = "Quality: EP";
                                     tmpQ = Quality.EP;
                                     break;
                                 default:
-                                    newtitle = "Quality: SP";
                                     tmpQ = Quality.SP;
                                     break;
                             }
 
                             if (UpdateTime(tmpQ))
                             {
-                                GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, newtitle);
                                 _quality = tmpQ;
+                                GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, "Quality: " + _quality.ToString());
                             }
                             
                         }
@@ -285,10 +282,11 @@ namespace Burner
                         if (VrtKey != null)
                         {
                             VrtKey.Reset();
-                            VrtKey.Text = GUIControl.GetSelectedListItem(GetID, (int)Controls.SHOW_NAMES).Label;
+                            GUIListItem li = GUIControl.GetSelectedListItem(GetID, (int)Controls.SHOW_NAMES);
+                            VrtKey.Text = li.Label;
                             VrtKey.DoModal(GetID);
-                            ((GUIListItem)_ShowNames[(int)GUIControl.GetSelectedListItem(GetID, (int)Controls.SHOW_NAMES).ItemId]).Label = VrtKey.Text;
-                            GUIControl.GetSelectedListItem(GetID, (int)Controls.SHOW_NAMES).Label = VrtKey.Text;
+                            ((GUIListItem)_ShowNames[li.ItemId]).Label = VrtKey.Text;
+                            li.Label = VrtKey.Text;
                         }
 
                     }
@@ -301,7 +299,7 @@ namespace Burner
                     {
                         GUIBurner brnWind = (GUIBurner)GUIWindowManager.GetWindow(GUIWindowManager.GetPreviousActiveWindow());
                         GUIWindowManager.ShowPreviousWindow();
-                        brnWind.LoadParameters(_ShowNames, _totaltime);
+                        brnWind.LoadParameters(_ShowNames, _totaltime, _quality);
                         return true;
                     }
 
