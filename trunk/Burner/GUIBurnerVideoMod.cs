@@ -46,7 +46,8 @@ namespace Burner
         public const int ID = 762; // Holds the ID of this Window
         private ArrayList _ShowNames = new ArrayList();
         private List<string> _Buttons;
-        Quality _quality;
+        public Quality _quality;
+        private int _totaltime;
 
         #endregion
 
@@ -103,6 +104,8 @@ namespace Burner
                     GUIPropertyManager.SetProperty("#currentmodule", GUILocalizeStrings.Get(2100));
                     GUIPropertyManager.SetProperty("#background_menu", @"I:\temp\DVD\F1_s.jpg");
 
+                    GUIControl.ClearControl(GetID, (int)Controls.SHOW_NAMES);
+
                     for (int i = 0; i < _ShowNames.Count; i++)
                     {
                         GUIListItem Item = new GUIListItem((GUIListItem)_ShowNames[i]);
@@ -119,6 +122,8 @@ namespace Burner
                     GUIControl.SetControlLabel(GetID, (int)Controls.PLAY_SHOW, _Buttons[1]);
                     GUIControl.SetControlLabel(GetID, (int)Controls.EPISODES, _Buttons[2]);
 
+                    UpdateTime(_quality);
+
                     return true;
 
                 #endregion
@@ -132,6 +137,8 @@ namespace Burner
 
                     if (iControl == (int)Controls.UP_DOWN_BITRATE)
                     {
+                        Quality tmpQ = _quality;
+                        
                         GUIDialogSelect2 dlgSelectBitrate = (GUIDialogSelect2)GUIWindowManager.GetWindow((int)Window.WINDOW_DIALOG_SELECT2);
 
                         if (dlgSelectBitrate != null)
@@ -143,25 +150,34 @@ namespace Burner
                             dlgSelectBitrate.Add("EP: 6h 22min");
                             dlgSelectBitrate.DoModal(GetID);
 
+                            string newtitle = "";
+                            
                             switch (dlgSelectBitrate.SelectedLabelText)
                             {
                                 case "SP: 2h 12min":
-                                    GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, "Quality: SP");
-                                    _quality = Quality.SP;
+                                    newtitle = "Quality: SP";
+                                    tmpQ = Quality.SP;
                                     break;
                                 case "LP: 3h 40min":
-                                    GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, "Quality: LP");
-                                    _quality = Quality.LP;
+                                    newtitle = "Quality: LP";
+                                    tmpQ = Quality.LP;
                                     break;
                                 case "EP: 6h 22min":
-                                    GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, "Quality: EP");
-                                    _quality = Quality.EP;
+                                    newtitle = "Quality: EP";
+                                    tmpQ = Quality.EP;
                                     break;
                                 default:
-                                    GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, "Quality: SP");
-                                    _quality = Quality.SP;
+                                    newtitle = "Quality: SP";
+                                    tmpQ = Quality.SP;
                                     break;
                             }
+
+                            if (UpdateTime(tmpQ))
+                            {
+                                GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, newtitle);
+                                _quality = tmpQ;
+                            }
+                            
                         }
                     }
 
@@ -285,7 +301,7 @@ namespace Burner
                     {
                         GUIBurner brnWind = (GUIBurner)GUIWindowManager.GetWindow(GUIWindowManager.GetPreviousActiveWindow());
                         GUIWindowManager.ShowPreviousWindow();
-                        brnWind.LoadParameters(_ShowNames);
+                        brnWind.LoadParameters(_ShowNames, _totaltime);
                         return true;
                     }
 
@@ -308,12 +324,58 @@ namespace Burner
         /// <param name="ShowNames">List with names of Shows</param>
         /// <param name="Buttons">List with "Main Menu", "Play Show", "Episodes", disk name</param>
         /// <param name="q">Default quality</param>
-        public void Start(ArrayList ShowNames, List<string> Buttons, Quality q)
+        public void Start(ArrayList ShowNames, List<string> Buttons, Quality q, int totaltime)
         {
             _ShowNames = ShowNames;
             _Buttons = Buttons;
             _quality = q;
+            _totaltime = totaltime;
         }
+
+        #endregion
+
+        #region Metods
+
+        private int getMaxTime(Quality q)
+        {
+            switch (q)
+            {
+                case Quality.SP:
+                    return 7920;
+
+                case Quality.LP:
+                    return 13200;
+
+                case Quality.EP:
+                    return 22920;
+            }
+            
+            return 7920;
+        
+        }
+
+        private bool UpdateTime(Quality q)
+        {
+
+            if (_totaltime < getMaxTime(q))
+            {
+                string time = MediaPortal.Util.Utils.SecondsToHMSString(_totaltime) + " of " + MediaPortal.Util.Utils.SecondsToHMSString(getMaxTime(q));
+                GUIPropertyManager.SetProperty("#duration", time);
+                return true;
+            } else {
+                GUIDialogNotify dlgNotify = (GUIDialogNotify)GUIWindowManager.GetWindow((int)Window.WINDOW_DIALOG_NOTIFY);
+                if (null != dlgNotify)
+                {
+                    dlgNotify.SetHeading(GUILocalizeStrings.Get(2100)); // Burner
+                    dlgNotify.SetText(GUILocalizeStrings.Get(2146)); // Not enough room on CD
+                    dlgNotify.DoModal(GetID);
+                }
+
+                return false;
+            }
+
+        }
+
 
         #endregion
 
