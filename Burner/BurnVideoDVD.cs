@@ -71,8 +71,8 @@ namespace Burner
     private List<string> _FilesToBurn = new List<string>(); // Converted Files ready to Burn
     private string _TvFormat = string.Empty; // "PAL" or "NTSC"
     private string _AspectRatio = string.Empty; // "4/3" or "16/9"
-    private List<string> _ShowNames; // Holds show names
-    private List<string> _Buttons; // Holds names of buttons on menu and name of disk
+    private List<string> _ShowNames = new List<string>(); // Holds show names
+    private List<string> _Buttons = new List<string>(); // Holds names of buttons on menu and name of disk
     private GUIBurnerVideoMod.Quality _quality; // Holds quality parametr for mencoder
 
     #endregion
@@ -126,7 +126,10 @@ namespace Burner
       }
 
       for (int i = 0; i < ShowNames.Count; i++)
-          _ShowNames[i] = ((GUIListItem)ShowNames[i]).Label;
+      {
+          string newStr = (string)((GUIListItem)ShowNames[i]).Label;
+          _ShowNames.Add(newStr);
+      }
 
       _Buttons = Buttons;
 
