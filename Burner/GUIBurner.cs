@@ -783,7 +783,7 @@ namespace Burner
               perc = 0;
             }
 
-            tmpStr = MediaPortal.Util.Utils.SecondsToHMSString(totalTime) + "  of " + MediaPortal.Util.Utils.SecondsToHMSString((int)max);
+            tmpStr = MediaPortal.Util.Utils.SecondsToHMSString(totalTime) + " " + GUILocalizeStrings.Get(1973) + " " + MediaPortal.Util.Utils.SecondsToHMSString((int)max);
           }
           break;
 
@@ -798,7 +798,7 @@ namespace Burner
             {
               perc = 0;
             }
-            tmpStr = MediaPortal.Util.Utils.GetSize(totalSize) + " of " + MediaPortal.Util.Utils.GetSize(max);
+            tmpStr = MediaPortal.Util.Utils.GetSize(totalSize) + " " + GUILocalizeStrings.Get(1973) + " " + MediaPortal.Util.Utils.GetSize(max);
           }
           break;
       }
@@ -1190,7 +1190,7 @@ namespace Burner
           GUIControl.ShowControl(GetID, (int)Controls.CONTROL_BUTTON3);
 
           GUIControl.EnableControl(GetID, (int)Controls.CONTROL_BUTTON4);
-          GUIControl.SetControlLabel(GetID, (int)Controls.CONTROL_BUTTON4, "Customize Menu");
+          GUIControl.SetControlLabel(GetID, (int)Controls.CONTROL_BUTTON4, GUILocalizeStrings.Get(993) + " " + GUILocalizeStrings.Get(924));
           // Customize menu
           GUIControl.ShowControl(GetID, (int)Controls.CONTROL_BUTTON4);
 
