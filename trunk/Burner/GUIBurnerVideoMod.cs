@@ -115,7 +115,7 @@ namespace Burner
                     {
                         _Buttons.Add("Main menu");
                         _Buttons.Add("Play Show");
-                        _Buttons.Add("Episodes");
+                        _Buttons.Add("Episodes: ");
                         _Buttons.Add(string.Format("MP-DVD-{0}", DateTime.Now.ToShortDateString()));
                     }
 
@@ -285,8 +285,13 @@ namespace Burner
                             GUIListItem li = GUIControl.GetSelectedListItem(GetID, (int)Controls.SHOW_NAMES);
                             VrtKey.Text = li.Label;
                             VrtKey.DoModal(GetID);
-                            ((GUIListItem)_ShowNames[li.ItemId]).Label = VrtKey.Text;
                             li.Label = VrtKey.Text;
+                            int lstcount = GUIControl.GetItemCount(GetID, (int)Controls.SHOW_NAMES);
+                            _ShowNames.Clear();
+                            for (int i = 0; i < lstcount; i++)
+                            {
+                                _ShowNames.Add( GUIControl.GetListItem(GetID, (int)Controls.SHOW_NAMES, i));
+                            }
                         }
 
                     }

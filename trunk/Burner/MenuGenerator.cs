@@ -67,7 +67,7 @@ namespace Burner
 
                 SubMenuStr.Add("Main menu");
                 SubMenuStr.Add("Play Show");
-                SubMenuStr.Add("Episodes");
+                SubMenuStr.Add("Episodes: ");
 
             }
             _SubMenuStr = SubMenuStr;
