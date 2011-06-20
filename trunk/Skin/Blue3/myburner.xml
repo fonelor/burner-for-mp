@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <window>
-  <id>760</id>
+  <id>761</id>
   <defaultcontrol>2</defaultcontrol>
   <allowoverlay>yes</allowoverlay>
   <define>#header.label:#burner_title</define>
@@ -19,8 +19,8 @@
       <description>My burner File Size label</description>
       <type>label</type>
       <id>1</id>
-      <posX>60</posX>
-      <posY>510</posY>
+      <posX>40</posX>
+      <posY>415</posY>
       <label>#burner_size</label>
       <font>font16</font>
       <align>left</align>

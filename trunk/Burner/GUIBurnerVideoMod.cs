@@ -102,7 +102,8 @@ namespace Burner
                     base.OnMessage(message);
 
                     GUIPropertyManager.SetProperty("#currentmodule", GUILocalizeStrings.Get(2100));
-                    GUIPropertyManager.SetProperty("#background_menu", @"I:\temp\DVD\F1_s.jpg");
+                    //GUIPropertyManager.SetProperty("#background_menu", @"I:\temp\DVD\F1_s.jpg");
+                    GUIControl.HideControl(GetID, (int)Controls.BACKGROUND_IMAGE); // this part should be done in next version of Burner
 
                     GUIControl.ClearControl(GetID, (int)Controls.SHOW_NAMES);
 
@@ -113,9 +114,9 @@ namespace Burner
                     }
                     if (_Buttons.Count == 0)
                     {
-                        _Buttons.Add("Main menu");
-                        _Buttons.Add("Play Show");
-                        _Buttons.Add("Episodes: ");
+                        _Buttons.Add(GUILocalizeStrings.Get(974)); // Main menu
+                        _Buttons.Add(GUILocalizeStrings.Get(4552)); // Play
+                        _Buttons.Add(GUILocalizeStrings.Get(1091) + ": "); //Show: 
                         _Buttons.Add(string.Format("MP-DVD-{0}", DateTime.Now.ToShortDateString()));
                     }
 
@@ -123,9 +124,12 @@ namespace Burner
                     GUIControl.SetControlLabel(GetID, (int)Controls.PLAY_SHOW, _Buttons[1]);
                     GUIControl.SetControlLabel(GetID, (int)Controls.EPISODES, _Buttons[2]);
 
+                    GUIControl.SetControlLabel(GetID, (int)Controls.DONE, GUILocalizeStrings.Get(804)); //Done
+                    //GUIControl.SetControlLabel(GetID, (int)Controls.DISK_NAME, GUILocalizeStrings.Get(988));
+
                     UpdateTime(_quality);
 
-                    GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, "Quality: " + _quality.ToString());
+                    GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, GUILocalizeStrings.Get(988) + " " + _quality.ToString()); // Quality
 
                     return true;
 
@@ -147,7 +151,7 @@ namespace Burner
                         if (dlgSelectBitrate != null)
                         {
                             dlgSelectBitrate.Reset();
-                            dlgSelectBitrate.SetHeading("Choose quality");
+                            dlgSelectBitrate.SetHeading(GUILocalizeStrings.Get(988)); //Quality
                             dlgSelectBitrate.Add("SP: 2h 12min");
                             dlgSelectBitrate.Add("LP: 3h 40min");
                             dlgSelectBitrate.Add("EP: 6h 22min");
@@ -172,7 +176,7 @@ namespace Burner
                             if (UpdateTime(tmpQ))
                             {
                                 _quality = tmpQ;
-                                GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, "Quality: " + _quality.ToString());
+                                GUIControl.SetControlLabel(GetID, (int)Controls.UP_DOWN_BITRATE, GUILocalizeStrings.Get(988) + " " + _quality.ToString()); // Quality
                             }
                             
                         }
@@ -362,7 +366,7 @@ namespace Burner
 
             if (_totaltime < getMaxTime(q))
             {
-                string time = MediaPortal.Util.Utils.SecondsToHMSString(_totaltime) + " of " + MediaPortal.Util.Utils.SecondsToHMSString(getMaxTime(q));
+                string time = MediaPortal.Util.Utils.SecondsToHMSString(_totaltime) + " " + GUILocalizeStrings.Get(1973) + " " + MediaPortal.Util.Utils.SecondsToHMSString(getMaxTime(q));
                 GUIPropertyManager.SetProperty("#duration", time);
                 return true;
             } else {

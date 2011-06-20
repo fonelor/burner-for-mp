@@ -12,14 +12,14 @@
       <description>background image</description>
       <type>image</type>
       <id>1</id>
-      <width>1280</width>
-      <height>720</height>
+      <width>720</width>
+      <height>576</height>
     </control>
     <control>
       <type>group</type>
       <description>group element</description>
-      <posX>71</posX>
-      <posY>121</posY>
+      <posX>40</posX>
+      <posY>97</posY>
       <layout>StackLayout</layout>
       <control>
       	<description>BitRate</description>
@@ -102,9 +102,11 @@
       <description>Show Names</description>
       <type>listcontrol</type>
       <id>9</id>
-      <posX>480</posX>
-      <posY>121</posY>
+      <posX>270</posX>
+      <spinPosX>585</spinPosX>
+      <spinPosY>310</spinPosY>
       <height>250</height>
+      <onright>30</onright>
       <onright>7</onright>
       <onleft>7</onleft>
       <onup>8</onup>
@@ -114,8 +116,9 @@
       <description>Time</description>
       <type>label</type>
       <id>10</id>
-      <posX>180</posX>
-      <posY>515</posY>
+      <posX>40</posX>
+      <posY>415</posY>
+      <font>font16</font>
       <label>#duration</label>
       <height>250</height>
       <onright>7</onright>
