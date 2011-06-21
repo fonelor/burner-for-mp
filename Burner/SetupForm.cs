@@ -372,7 +372,7 @@ namespace Burner
         this.checkBoxDoNotEject.AutoSize = true;
         this.checkBoxDoNotEject.Checked = true;
         this.checkBoxDoNotEject.CheckState = System.Windows.Forms.CheckState.Checked;
-        this.checkBoxDoNotEject.Location = new System.Drawing.Point(420, 141);
+        this.checkBoxDoNotEject.Location = new System.Drawing.Point(318, 141);
         this.checkBoxDoNotEject.Name = "checkBoxDoNotEject";
         this.checkBoxDoNotEject.Size = new System.Drawing.Size(169, 17);
         this.checkBoxDoNotEject.TabIndex = 70;
@@ -385,7 +385,7 @@ namespace Burner
         this.groupBoxAspectRatio.Controls.Add(this.radioButtonAspectRatio16x9);
         this.groupBoxAspectRatio.Controls.Add(this.radioButtonAspectRatio4x3);
         this.groupBoxAspectRatio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-        this.groupBoxAspectRatio.Location = new System.Drawing.Point(267, 91);
+        this.groupBoxAspectRatio.Location = new System.Drawing.Point(165, 91);
         this.groupBoxAspectRatio.Name = "groupBoxAspectRatio";
         this.groupBoxAspectRatio.Size = new System.Drawing.Size(130, 45);
         this.groupBoxAspectRatio.TabIndex = 69;
@@ -420,7 +420,7 @@ namespace Burner
         this.groupBoxDVDFormat.Controls.Add(this.radioButtonTvFormatNtsc);
         this.groupBoxDVDFormat.Controls.Add(this.radioButtonTvFormatPal);
         this.groupBoxDVDFormat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-        this.groupBoxDVDFormat.Location = new System.Drawing.Point(120, 91);
+        this.groupBoxDVDFormat.Location = new System.Drawing.Point(16, 91);
         this.groupBoxDVDFormat.Name = "groupBoxDVDFormat";
         this.groupBoxDVDFormat.Size = new System.Drawing.Size(130, 45);
         this.groupBoxDVDFormat.TabIndex = 68;
@@ -453,21 +453,21 @@ namespace Burner
         // checkBoxDontBurnDVD
         // 
         this.checkBoxDontBurnDVD.AutoSize = true;
-        this.checkBoxDontBurnDVD.Location = new System.Drawing.Point(420, 118);
+        this.checkBoxDontBurnDVD.Location = new System.Drawing.Point(318, 118);
         this.checkBoxDontBurnDVD.Name = "checkBoxDontBurnDVD";
-        this.checkBoxDontBurnDVD.Size = new System.Drawing.Size(127, 17);
+        this.checkBoxDontBurnDVD.Size = new System.Drawing.Size(183, 17);
         this.checkBoxDontBurnDVD.TabIndex = 67;
-        this.checkBoxDontBurnDVD.Text = "Do not burn the DVD";
+        this.checkBoxDontBurnDVD.Text = "Do not burn the DVD (leave files)";
         this.checkBoxDontBurnDVD.UseVisualStyleBackColor = true;
         // 
         // checkBoxLeaveFileForDebug
         // 
         this.checkBoxLeaveFileForDebug.AutoSize = true;
-        this.checkBoxLeaveFileForDebug.Location = new System.Drawing.Point(420, 97);
+        this.checkBoxLeaveFileForDebug.Location = new System.Drawing.Point(318, 97);
         this.checkBoxLeaveFileForDebug.Name = "checkBoxLeaveFileForDebug";
-        this.checkBoxLeaveFileForDebug.Size = new System.Drawing.Size(167, 17);
+        this.checkBoxLeaveFileForDebug.Size = new System.Drawing.Size(156, 17);
         this.checkBoxLeaveFileForDebug.TabIndex = 63;
-        this.checkBoxLeaveFileForDebug.Text = "Keep temp files for debugging";
+        this.checkBoxLeaveFileForDebug.Text = "Debug mod (show console)";
         this.checkBoxLeaveFileForDebug.UseVisualStyleBackColor = true;
         // 
         // labelTempHint

@@ -380,7 +380,7 @@ namespace Burner
       }*/
   
         MenuGenerator MenuGen = new MenuGenerator(_ShowNames, Config.GetFile(Config.Dir.Skin, @"Default\Media\", "background.png"), 
-                _TempFolderPath, _Buttons, true);
+                _TempFolderPath, _Buttons, _InDebugMode);
         MenuGen.Start();
 
         // No Actual external app running to Exit so 
@@ -546,7 +546,7 @@ namespace Burner
 
         string discName = string.Format("\"MP-DVD-{0}\"", DateTime.Now.ToShortDateString());
        
-          if (_Buttons[3] != null)
+          if (_Buttons.Count == 2)
             discName = "\"" + _Buttons[3] + "\"";
 
         string imgFolder = Path.Combine(_TempFolderPath, "DVD_Image");
@@ -931,7 +931,7 @@ namespace Burner
     private void CleanUp()
     {
       ProvideStatusUpdate("Performing Cleanup of Temporary Files");
-      if (!_InDebugMode)
+      if (_BurnTheDVD)
       {
         // Delete the temp DVD dir and any contents from any previous DVD creation.
         Directory.Delete(_TempFolderPath, true);

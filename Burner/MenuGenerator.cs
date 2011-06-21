@@ -264,7 +264,8 @@ namespace Burner
             MGProcess = new Process();
             MGProcess.EnableRaisingEvents = true;
             MGProcess.StartInfo.WorkingDirectory = _PathToTempFolder;
-            MGProcess.StartInfo.UseShellExecute = true;
+            MGProcess.StartInfo.UseShellExecute = false;
+            MGProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             if (!_InDebugMode) // Show output if in Debug mode
             {
                 MGProcess.StartInfo.RedirectStandardOutput = true;
@@ -415,7 +416,7 @@ namespace Burner
                             "\"  -n p -f 8 -o \"" + 
                             Path.Combine(_PathToTempFolder, "subMenuBackground." + i.ToString() + ".m2v") + "\"");
                 }
-                SW_mp2.WriteLine("exit(0)");
+                //SW_mp2.WriteLine("pause");
 
                 SW_mp2.Close();
             }
@@ -424,10 +425,10 @@ namespace Burner
             MGProcess = new Process();
             MGProcess.EnableRaisingEvents = true;
             MGProcess.StartInfo.WorkingDirectory = _PathToTempFolder;
-            MGProcess.StartInfo.UseShellExecute = true;
+            MGProcess.StartInfo.UseShellExecute = false;
             if (!_InDebugMode) // Show output if in Debug mode
             {
-                MGProcess.StartInfo.RedirectStandardOutput = true;
+                //MGProcess.StartInfo.RedirectStandardOutput = true;
                 MGProcess.StartInfo.CreateNoWindow = true;
             }
 
@@ -479,7 +480,7 @@ namespace Burner
             MGProcess = new Process();
             MGProcess.EnableRaisingEvents = true;
             MGProcess.StartInfo.WorkingDirectory = _PathToTempFolder;
-            MGProcess.StartInfo.UseShellExecute = true;
+            MGProcess.StartInfo.UseShellExecute = false;
             if (!_InDebugMode) // Show output if in Debug mode
             {
                 MGProcess.StartInfo.RedirectStandardOutput = true;
@@ -487,6 +488,7 @@ namespace Burner
             }
 
             MGProcess.StartInfo.FileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.System), "cmd.exe");
+
             MGProcess.StartInfo.Arguments = "/C addsilence.bat";
             MGProcess.Exited += new EventHandler(MGProcess_Exited);
 
@@ -538,7 +540,7 @@ namespace Burner
             MGProcess = new Process();
             MGProcess.EnableRaisingEvents = true;
             MGProcess.StartInfo.WorkingDirectory = _PathToTempFolder;
-            MGProcess.StartInfo.UseShellExecute = true;
+            MGProcess.StartInfo.UseShellExecute = false;
             if (!_InDebugMode) // Show output if in Debug mode
             {
                 MGProcess.StartInfo.RedirectStandardOutput = true;
