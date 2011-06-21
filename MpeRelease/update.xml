@@ -312,7 +312,7 @@
         <OnlineLocation>https://mp-plugins.svn.sourceforge.net/svnroot/mp-plugins/trunk/plugins/Burner/MpeRelease/Burner_1.1.0.18.mpe1</OnlineLocation>
         <ReleaseDate>2011-06-21T19:33:19</ReleaseDate>
         <Tags>burn dvd cd</Tags>
-        <Location>I:\MP-Burner\MpeRelease\Burner_1.1.0.18.mpe1</Location>
+        <Location>I:\MP-Burner\MpeRelease\Burner_1.0.1.4232.mpe1</Location>
         <Params>
           <Items>
             <SectionParam Name="Icon">
