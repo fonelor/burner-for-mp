@@ -1459,6 +1459,19 @@ namespace Burner
               strAspectRatio = @"16/9";
             }
 
+            if (ShowNames.Count == 0)
+            {
+                // Copy contents of burn list
+                ShowNames.Clear();
+
+                int count = GUIControl.GetItemCount(GetID, (int)Controls.CONTROL_LIST_COPY);
+                for (int i = 0; i < count; i++)
+                {
+                    GUIListItem cItem = GUIControl.GetListItem(GetID, (int)Controls.CONTROL_LIST_COPY, i);
+                    ShowNames.Add(cItem);
+                }
+            }
+
             VideoDvdBurner = new BurnVideoDVD(FilePathsToBurn, strTempFolder, strTvFormat, strAspectRatio, dvdBurnFolder,
                                               LeaveFilesForDebugging, recorderdrive, DummyBurn, ShowNames, Buttons, q);
 

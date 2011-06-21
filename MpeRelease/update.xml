@@ -231,5 +231,126 @@
         <FolderGroups />
       </ProjectSettings>
     </PackageClass>
+    <PackageClass>
+      <Version>2.0</Version>
+      <Groups>
+        <Items>
+          <GroupItem Name="Default">
+            <DisplayName>Default</DisplayName>
+            <DefaulChecked>true</DefaulChecked>
+            <Description>Default</Description>
+            <Files>
+              <Items />
+            </Files>
+          </GroupItem>
+          <GroupItem Name="Skin">
+            <DisplayName>Skin</DisplayName>
+            <DefaulChecked>true</DefaulChecked>
+            <Description>Skin</Description>
+            <Files>
+              <Items />
+            </Files>
+          </GroupItem>
+          <GroupItem Name="support">
+            <DisplayName>support</DisplayName>
+            <DefaulChecked>true</DefaulChecked>
+            <Description>support</Description>
+            <Files>
+              <Items />
+            </Files>
+          </GroupItem>
+        </Items>
+      </Groups>
+      <Sections>
+        <Items />
+      </Sections>
+      <Dependencies>
+        <Items>
+          <DependencyItem>
+            <Type>MediaPortal</Type>
+            <Id />
+            <MinVersion>
+              <Major>1</Major>
+              <Minor>1</Minor>
+              <Build>0</Build>
+              <Revision>6</Revision>
+            </MinVersion>
+            <MaxVersion>
+              <Major>1</Major>
+              <Minor>1</Minor>
+              <Build>0</Build>
+              <Revision>6</Revision>
+            </MaxVersion>
+            <WarnOnly>true</WarnOnly>
+            <Message>Need version of MediaPortal with version 1.1.0.6</Message>
+            <Name>MediaPortal</Name>
+          </DependencyItem>
+        </Items>
+      </Dependencies>
+      <GeneralInfo>
+        <Name>Burner</Name>
+        <Id>df4d06b5-b67b-413a-86de-3d161b2ae3d6</Id>
+        <Author>Mat, MP team, Sergey Filippov</Author>
+        <HomePage>burner-for-mp.googlecode.com</HomePage>
+        <ForumPage>http://forum.team-mediaportal.com/mediaportal-plugins-47/plugin-burner-97106/</ForumPage>
+        <UpdateUrl>https://mp-plugins.svn.sourceforge.net/svnroot/mp-plugins/trunk/plugins/Burner/MpeRelease/update.xml</UpdateUrl>
+        <Version>
+          <Major>1</Major>
+          <Minor>1</Minor>
+          <Build>0</Build>
+          <Revision>18</Revision>
+        </Version>
+        <ExtensionDescription>Burner will allow you to burn audio, video and data CDs and DVDs</ExtensionDescription>
+        <VersionDescription>+ Added dialog for DVD menu modification
++ Added option to change bitrate, now you can place on single DVD up to 6 hours of video
++ Rewritten process of menu generation for more control on this process
++ Now you don't need to install windows package with dvdburn.exe
++ A lot of minor changes
+
+14.06.2011 i moved burner to burner-for-mp.googlecode.com, and ther is a bug tracker, so i'm waiting for your feedback</VersionDescription>
+        <DevelopmentStatus>Stable</DevelopmentStatus>
+        <OnlineLocation>https://mp-plugins.svn.sourceforge.net/svnroot/mp-plugins/trunk/plugins/Burner/MpeRelease/Burner_1.0.0.4223.mpe1</OnlineLocation>
+        <ReleaseDate>2011-06-21T19:33:19</ReleaseDate>
+        <Tags>burn dvd cd</Tags>
+        <Location>I:\MP-Burner\MpeRelease\Burner_1.1.0.18.mpe1</Location>
+        <Params>
+          <Items>
+            <SectionParam Name="Icon">
+              <Value />
+              <ValueType>File</ValueType>
+              <Description>The icon file of the package (jpg,png,bmp)</Description>
+            </SectionParam>
+            <SectionParam Name="Online Icon">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>The icon file of the package stored online (jpg,png,bmp)</Description>
+            </SectionParam>
+            <SectionParam Name="Configuration file">
+              <Value />
+              <ValueType>Template</ValueType>
+              <Description>The file used to configure the extension.
+ If have .exe extension the will be executed
+ If have .dll extension used like MP plugin configuration</Description>
+            </SectionParam>
+            <SectionParam Name="Online Screenshots">
+              <Value />
+              <ValueType>String</ValueType>
+              <Description>Online stored screenshot urls separated by ; </Description>
+            </SectionParam>
+            <SectionParam Name="Force to uninstall on update">
+              <Value>yes</Value>
+              <ValueType>Bool</ValueType>
+              <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
+            </SectionParam>
+          </Items>
+        </Params>
+      </GeneralInfo>
+      <UniqueFileList>
+        <Items />
+      </UniqueFileList>
+      <ProjectSettings>
+        <FolderGroups />
+      </ProjectSettings>
+    </PackageClass>
   </Items>
 </ExtensionCollection>
