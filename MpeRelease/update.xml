@@ -74,7 +74,7 @@
         <VersionDescription />
         <DevelopmentStatus>Stable</DevelopmentStatus>
         <OnlineLocation>https://mp-plugins.svn.sourceforge.net/svnroot/mp-plugins/trunk/plugins/Burner/MpeRelease/Burner_1.0.0.4223.mpe1</OnlineLocation>
-        <ReleaseDate>2011-05-26T19:33:19.421875+04:00</ReleaseDate>
+        <ReleaseDate>2011-05-26T18:33:19.421875+03:00</ReleaseDate>
         <Tags>burn dvd cd</Tags>
         <Location>I:\MP-Burner\MpeRelease\Burner_1.0.0.4223.mpe1</Location>
         <Params>
@@ -189,7 +189,7 @@
         <VersionDescription />
         <DevelopmentStatus>Stable</DevelopmentStatus>
         <OnlineLocation>https://mp-plugins.svn.sourceforge.net/svnroot/mp-plugins/trunk/plugins/Burner/MpeRelease/Burner_1.0.0.4223.mpe1</OnlineLocation>
-        <ReleaseDate>2011-05-26T19:33:19.421875+04:00</ReleaseDate>
+        <ReleaseDate>2011-05-26T18:33:19.421875+03:00</ReleaseDate>
         <Tags>burn dvd cd</Tags>
         <Location>I:\MP-Burner\MpeRelease\Burner_1.0.1.4232.mpe1</Location>
         <Params>
@@ -312,7 +312,15 @@
         <OnlineLocation>https://mp-plugins.svn.sourceforge.net/svnroot/mp-plugins/trunk/plugins/Burner/MpeRelease/Burner_1.1.0.18.mpe1</OnlineLocation>
         <ReleaseDate>2011-06-21T19:33:19</ReleaseDate>
         <Tags>burn dvd cd</Tags>
+<<<<<<< .mine
+<<<<<<< .mine
         <Location>I:\MP-Burner\MpeRelease\Burner_1.1.0.18.mpe1</Location>
+=======
+        <Location>C:\workspace\MP-Burner\MpeRelease\Burner_1.1.0.18.mpe1</Location>
+>>>>>>> .r4260
+=======
+        <Location>I:\MP-Burner\MpeRelease\Burner_1.1.0.18.mpe1</Location>
+>>>>>>> .r22
         <Params>
           <Items>
             <SectionParam Name="Icon">
@@ -338,7 +346,7 @@
               <Description>Online stored screenshot urls separated by ; </Description>
             </SectionParam>
             <SectionParam Name="Force to uninstall on update">
-              <Value>yes</Value>
+              <Value>YES</Value>
               <ValueType>Bool</ValueType>
               <Description>Show dialog and force to uninstall previous version when updating an extension. Should only be disabled if you are using an NSIS/MSI installer.</Description>
             </SectionParam>
