@@ -489,7 +489,7 @@ Changelog:
     <OnlineLocation>http://burner-for-mp.googlecode.com/svn/MpeRelease/Burner_1.1.0.18.mpe1</OnlineLocation>
     <ReleaseDate>2011-06-21T19:33:19</ReleaseDate>
     <Tags>burn dvd cd</Tags>
-    <Location>I:\MP-Burner\MpeRelease\Burner_1.1.0.18.mpe1</Location>
+    <Location>I:\workspace\burner-for-mp\MpeRelease\Burner_1.1.0.18.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -834,7 +834,7 @@ Changelog:
       </FolderGroup>
     </FolderGroups>
     <ProjectFilename>I:\workspace\burner-for-mp\trunk\burner.xmp2</ProjectFilename>
-    <UpdatePath1>I:\MP-Burner\MpeRelease\update.xml</UpdatePath1>
+    <UpdatePath1>I:\workspace\burner-for-mp\MpeRelease\update.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>

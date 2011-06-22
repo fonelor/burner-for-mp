@@ -82,7 +82,7 @@
         <OnlineLocation>http://burner-for-mp.googlecode.com/svn/MpeRelease/Burner_1.1.0.18.mpe1</OnlineLocation>
         <ReleaseDate>2011-06-21T19:33:19</ReleaseDate>
         <Tags>burn dvd cd</Tags>
-        <Location>I:\MP-Burner\MpeRelease\Burner_1.1.0.18.mpe1</Location>
+        <Location>I:\workspace\burner-for-mp\MpeRelease\Burner_1.1.0.18.mpe1</Location>
         <Params>
           <Items>
             <SectionParam Name="Icon">
