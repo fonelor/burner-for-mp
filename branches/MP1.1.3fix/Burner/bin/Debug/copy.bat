@@ -1,0 +1,1 @@
+copy "Burner.*" "I:\Program Files\Team MediaPortal\MediaPortal\plugins\Windows\"

@@ -1,0 +1,18 @@
+modes
+1. SP 2.12
+res=720x576 
+maxBitRate=9800
+bitRate=5000
+k=0.557
+
+2. LP 3.40
+res=720x576
+maxBitRate=5000
+bitRate=2500
+k=0.334
+
+3. EP 6.22
+res=720x576
+maxBitRate=2600
+bitRate=1400
+k=0.202
