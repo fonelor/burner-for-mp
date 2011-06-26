@@ -189,7 +189,7 @@ namespace Burner
             {
                 int y = i * (Button.Height + 10);
                 string text = _ShowNames[i - 1];
-                mainMenuStamp = CombineImages(mainMenuStamp, Button, 10, y);
+                mainMenuStamp = CombineImages(mainMenuStamp, Button, 40, y);
                 menuWithText = PutTextOnImage(menuWithText, text, 60, y, 26);
             }
 
@@ -330,11 +330,11 @@ namespace Burner
                 menuWithText = PutTextOnImage(menuWithText, _SubMenuStr[2] + " " + _ShowNames[curMenu], 60, 20, 26);
 
                 // Add Play Show
-                subMenuStamp = CombineImages(subMenuStamp, Button, 10, 400);
+                subMenuStamp = CombineImages(subMenuStamp, Button, 40, 400);
                 menuWithText = PutTextOnImage(menuWithText, _SubMenuStr[1], 60, 400, 26);
 
                 // Add Main menu
-                subMenuStamp = CombineImages(subMenuStamp, Button, 10, 450);
+                subMenuStamp = CombineImages(subMenuStamp, Button, 40, 450);
                 menuWithText = PutTextOnImage(menuWithText, _SubMenuStr[0], 60, 450, 26);
 
                 // Save stamp image and background
