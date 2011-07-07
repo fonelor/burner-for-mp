@@ -343,14 +343,7 @@
 It is recommended that you close all other applications before continuing.
 Click Next to continue or Cancel to exit Setup.
 
-Changelog:
-+ Added dialog for DVD menu modification
-+ Added option to change bitrate, now you can place on single DVD up to 6 hours of video
-+ Rewritten process of menu generation for more control on this process
-+ Now you don't need to install windows package with dvdburn.exe
-+ A lot of minor changes
-
-14.06.2011 i moved burner to burner-for-mp.googlecode.com, and ther is a bug tracker, so i'm waiting for your feedback</Value>
+Fixed issue with EPG</Value>
               <ValueType>String</ValueType>
               <Description />
             </SectionParam>
@@ -475,21 +468,15 @@ Changelog:
       <Major>1</Major>
       <Minor>1</Minor>
       <Build>0</Build>
-      <Revision>19</Revision>
+      <Revision>21</Revision>
     </Version>
     <ExtensionDescription>Burner will allow you to burn audio, video and data CDs and DVDs</ExtensionDescription>
-    <VersionDescription>+ Added dialog for DVD menu modification
-+ Added option to change bitrate, now you can place on single DVD up to 6 hours of video
-+ Rewritten process of menu generation for more control on this process
-+ Now you don't need to install windows package with dvdburn.exe
-+ A lot of minor changes
-
-14.06.2011 i moved burner to burner-for-mp.googlecode.com, and ther is a bug tracker, so i'm waiting for your feedback</VersionDescription>
+    <VersionDescription>Fixed issue with EPG</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>http://burner-for-mp.googlecode.com/svn/MpeRelease/Burner_1.1.0.18.mpe1</OnlineLocation>
-    <ReleaseDate>2011-06-21T19:33:19</ReleaseDate>
+    <OnlineLocation>http://burner-for-mp.googlecode.com/svn/MpeRelease/Burner_1.1.0.21.mpe1</OnlineLocation>
+    <ReleaseDate>2011-07-07T19:33:19</ReleaseDate>
     <Tags>burn dvd cd</Tags>
-    <Location>I:\workspace\burner-for-mp\MpeRelease\Burner_1.1.0.18.mpe1</Location>
+    <Location>I:\workspace\burner-for-mp\MpeRelease\Burner_1.1.0.21.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">

@@ -43,7 +43,7 @@ namespace Burner
     {
         #region Class Variables
 
-        public const int ID = 762; // Holds the ID of this Window
+        public const int ID = 76221; // Holds the ID of this Window
         private ArrayList _ShowNames = new ArrayList();
         private List<string> _Buttons;
         public Quality _quality;

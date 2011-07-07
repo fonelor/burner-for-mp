@@ -2,11 +2,6 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-//MP plugin compability check
-using MediaPortal.Common.Utils;
-[assembly: CompatibleVersion("1.1.7.0")]
-[assembly: UsesSubsystem("MP")]
-
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
