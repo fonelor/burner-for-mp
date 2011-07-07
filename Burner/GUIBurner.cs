@@ -154,7 +154,7 @@ namespace Burner
     public ArrayList ShowNames = new ArrayList();
     public GUIBurnerVideoMod.Quality q = GUIBurnerVideoMod.Quality.SP;
 
-    public const int ID = 761;
+    public const int ID = 76220;
 
     // Convert to short pathnames (madlldlib)
     [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Auto)]
