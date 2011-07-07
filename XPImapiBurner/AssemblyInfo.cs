@@ -20,10 +20,6 @@
 
 using System.Reflection;
 
-//MP plugin compability check
-using MediaPortal.Common.Utils;
-[assembly: CompatibleVersion("1.1.7.0")]
-[assembly: UsesSubsystem("MP")]
 
 //
 // General Information about an assembly is controlled through the following 
