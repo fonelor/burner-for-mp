@@ -30,9 +30,3 @@ Ther are 2 ways to install Burner plugin - manual (not recomended) and througth 
   # Download latest version of Burner plugin (Burner_manual) and support packege from [http://code.google.com/p/burner-for-mp/downloads/list here].
   # Unpack Burner_manual to {{{MediaPortal\plugins\Windows\}}}
   # Unpack support packege to {{{MediaPortal\}}}
-
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
