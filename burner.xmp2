@@ -442,21 +442,40 @@ Fixed issue with EPG</Value>
         <MinVersion>
           <Major>1</Major>
           <Minor>1</Minor>
-          <Build>0</Build>
-          <Revision>6</Revision>
+          <Build>6</Build>
+          <Revision>27644</Revision>
         </MinVersion>
         <MaxVersion>
           <Major>1</Major>
           <Minor>1</Minor>
-          <Build>0</Build>
-          <Revision>6</Revision>
+          <Build>6</Build>
+          <Revision>27644</Revision>
         </MaxVersion>
-        <WarnOnly>true</WarnOnly>
-        <Message>Need version of MediaPortal with version 1.1.0.6</Message>
+        <WarnOnly>false</WarnOnly>
+        <Message>requires MediaPortal version 1.1.6.27644 to 1.1.6.27644.</Message>
         <Name>MediaPortal</Name>
       </DependencyItem>
     </Items>
   </Dependencies>
+  <PluginDependencies>
+    <Items>
+      <PluginDependencyItem AssemblyName="Burner.dll">
+        <CompatibleVersion>
+          <Items>
+            <CompatibleVersionItem>
+              <MinRequiredVersion>1.1.7.0</MinRequiredVersion>
+              <DesignedForVersion>1.1.7.0</DesignedForVersion>
+            </CompatibleVersionItem>
+          </Items>
+        </CompatibleVersion>
+        <SubSystemsUsed>
+          <Items>
+            <SubSystemItem Name="MP" />
+          </Items>
+        </SubSystemsUsed>
+      </PluginDependencyItem>
+    </Items>
+  </PluginDependencies>
   <GeneralInfo>
     <Name>Burner</Name>
     <Id>df4d06b5-b67b-413a-86de-3d161b2ae3d6</Id>
@@ -468,15 +487,15 @@ Fixed issue with EPG</Value>
       <Major>1</Major>
       <Minor>1</Minor>
       <Build>0</Build>
-      <Revision>21</Revision>
+      <Revision>22</Revision>
     </Version>
     <ExtensionDescription>Burner will allow you to burn audio, video and data CDs and DVDs</ExtensionDescription>
-    <VersionDescription>Fixed issue with EPG</VersionDescription>
+    <VersionDescription>Fixed installer issue</VersionDescription>
     <DevelopmentStatus>Stable</DevelopmentStatus>
-    <OnlineLocation>http://burner-for-mp.googlecode.com/svn/MpeRelease/Burner_1.1.0.21.mpe1</OnlineLocation>
-    <ReleaseDate>2011-07-07T19:33:19</ReleaseDate>
+    <OnlineLocation>http://burner-for-mp.googlecode.com/svn/MpeRelease/Burner_1.1.0.22.mpe1</OnlineLocation>
+    <ReleaseDate>2011-09-17T19:33:19</ReleaseDate>
     <Tags>burn dvd cd</Tags>
-    <Location>I:\workspace\burner-for-mp\MpeRelease\Burner_1.1.0.21.mpe1</Location>
+    <Location>I:\workspace\burner-for-mp\MpeRelease\Burner_1.1.0.22.mpe1</Location>
     <Params>
       <Items>
         <SectionParam Name="Icon">
@@ -820,9 +839,10 @@ Fixed issue with EPG</Value>
         <Recursive>true</Recursive>
       </FolderGroup>
     </FolderGroups>
-    <ProjectFilename>I:\workspace\burner-for-mp\trunk\burner.xmp2</ProjectFilename>
+    <ProjectFilename>burner.xmp2</ProjectFilename>
     <UpdatePath1>I:\workspace\burner-for-mp\MpeRelease\update.xml</UpdatePath1>
     <UpdatePath2 />
     <UpdatePath3 />
   </ProjectSettings>
+  <IsSkin>false</IsSkin>
 </PackageClass>
