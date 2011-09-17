@@ -1,0 +1,13 @@
+#summary burner skin for StreamedMP installation
+#labels Featured,Phase-Deploy,Phase-Support
+
+= Introduction =
+
+There is a problem with burner and StreamedMP. StreamedMP does not provide skin files for burner.
+
+
+= Details =
+
+To make burner works with StreamedMP you need:
+    # Download http://burner-for-mp.googlecode.com/files/StreamedMP.zip
+    # Unzip it to X:\Documents and Settings\All Users\Application Data\Team MediaPortal\MediaPortal\skin\
