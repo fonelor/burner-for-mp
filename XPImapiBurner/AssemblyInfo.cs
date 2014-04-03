@@ -21,8 +21,9 @@
 using System.Reflection;
 
 //MP plugin compability check
+using MediaPortal;
 using MediaPortal.Common.Utils;
-[assembly: CompatibleVersion("1.1.7.0")]
+[assembly: CompatibleVersion("1.6.0.0")]
 [assembly: UsesSubsystem("MP")]
 
 //
