@@ -466,8 +466,8 @@
         <ExtensionDescription>Burner will allow you to burn audio, video and data CDs and DVDs</ExtensionDescription>
         <VersionDescription>Fixed installer issue</VersionDescription>
         <DevelopmentStatus>Stable</DevelopmentStatus>
-        <OnlineLocation>http://burner-for-mp.googlecode.com/svn/MpeRelease/Burner_1.1.0.22.mpe1</OnlineLocation>
-        <ReleaseDate>2011-09-17T19:33:19</ReleaseDate>
+        <OnlineLocation>http://burner-for-mp.googlecode.com/svn/MpeRelease/Burner_1.1.0.24.mpe1</OnlineLocation>
+        <ReleaseDate>2014-04-04T19:33:19</ReleaseDate>
         <Tags>burn dvd cd</Tags>
         <Location>D:\workspace\mediaportal\Burner_svn\MpeRelease\Burner_1.1.0.24.mpe1</Location>
         <Params>
