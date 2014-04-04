@@ -124,10 +124,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Common.Utils">
-      <HintPath>..\..\..\..\Program Files (x86)\Team MediaPortal\MediaPortal\Common.Utils.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Team MediaPortal\MediaPortal\Common.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Core">
-      <HintPath>..\..\MediaPortal-1\mediaportal\Core\bin\Debug\Core.dll</HintPath>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Team MediaPortal\MediaPortal\Core.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <Name>System</Name>
